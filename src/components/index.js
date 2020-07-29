@@ -1,3 +1,3 @@
 export {NavBar} from './NavBar/NavBar';
-export {Home} from './Pages/Home';
+export {BirdCard} from './BirdCard/BirdCard';
 export {Counter} from './Counter/Counter';

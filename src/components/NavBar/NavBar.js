@@ -1,28 +1,29 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export const NavBar = () => (
     <nav className='nav-bar'>
         <div className="nav-bar--brend">
-            Song Bird
+        <NavLink exact to="/home" className="nav-bar--link">Song Bird</NavLink>
         </div>
     <ul>
         <li className="nav-bar--item">
-            <a href="/train" className="nav-bar--link">Тренировка</a>
+            <NavLink to="/train" className="nav-bar--link">Тренировка</NavLink>
         </li>
         <li className="nav-bar--item">
-            <a href="/passeridae" className="nav-bar--link">Воробьиные</a>
+            <NavLink to="/passeridae" className="nav-bar--link">Воробьиные</NavLink>
         </li>
         <li className="nav-bar--item">
-            <a href="/forestbirds" className="nav-bar--link">Лесные птицы</a>
+            <NavLink to="/forestbirds" className="nav-bar--link">Лесные птицы</NavLink>
         </li>
         <li className="nav-bar--item">
-            <a href="/songbirds" className="nav-bar--link">Певчие птицы</a>
+            <NavLink to="/songbirds" className="nav-bar--link">Певчие птицы</NavLink>
         </li>
         <li className="nav-bar--item">
-            <a href="/preybirds" className="nav-bar--link">Хищные птицы</a>
+            <NavLink to="/preybirds" className="nav-bar--link">Хищные птицы</NavLink>
         </li>
         <li className="nav-bar--item">
-            <a href="/seabirds" className="nav-bar--link">Морские птицы</a>
+            <NavLink to="/seabirds" className="nav-bar--link">Морские птицы</NavLink>
         </li>
     </ul>
     </nav>
