@@ -1,32 +1,28 @@
 import React from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
+import { Layout } from 'components/Layout/Layout';
 import './App.scss';
-import {NavBar} from './components';
 import {Home, QuizPage} from './Pages';
 import {Train} from './Pages';
 
-function App() {
-  return (
-    <BrowserRouter>
-      <div className="container">
-        <header>
-          <NavBar />
-        </header>
-        <main>
-          <Switch>
-            <Route path='/' component={Home} />
-            <Route path='/train' component={Train} />
-            <Route path='/passeridae' component={() => QuizPage('Passeridae')} />
-            <Route path='/forestbirds' component={() => QuizPage('Forestbirds')} />
-            <Route path='/songbirds' component={() => QuizPage('Songbirds')} />
-            <Route path='/preybirds' component={() => QuizPage('Preybirds')} />
-            <Route path='/seabirds' component={() => QuizPage('Seabirds')} />
-          </Switch>
-        </main>
-        <footer></footer>
-      </div>
-    </BrowserRouter>
-  );
-}
+
+const App = () => (
+      <Layout>
+        <Switch>
+          <Route path='/train' component={Train} />
+          <Route exact path='/passeridae' render={(props) =>
+            <QuizPage {...props} title={'Passeridae'} />} />
+          <Route path='/forestbirds' component={(props) =>
+            <QuizPage {...props} title={'Forestbirds'} />} />
+          <Route path='/songbirds' component={(props) =>
+            <QuizPage {...props} title={'Songbirds'} />} />
+          <Route path='/preybirds' component={(props) =>
+            <QuizPage {...props} title={'Preybirds'} />} />
+          <Route path='/seabirds' component={(props) =>
+            <QuizPage {...props} title={'Seabirds'} />} />
+          <Route path='/' component={Home} />
+        </Switch>
+      </Layout>
+    );
 
 export default App;

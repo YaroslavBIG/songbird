@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const QuizPage = (page) => {
-  console.log('lskdnksld', page)
+export const QuizPage = (props) => {
+  console.log('lskdnksld', props)
   return (
 <div>
-    <h1>{page}</h1>
+    <h1>{props.title}</h1>
   </div>
 )};
