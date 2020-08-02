@@ -1,14 +1,20 @@
 import React from 'react';
 import { NavBar } from 'components/NavBar/NavBar';
+import { Counter } from 'components/Counter/Counter';
+import { CounterState } from 'components/hoc/CounterState';
 
-export const Layout = (props) => (
+export const Layout = (props) => {
+ return (
       <div className="container">
-        <header>
-          <NavBar />
-        </header>
-        <main>
-          { props.children }
-        </main>
-        <footer></footer>
+        <CounterState>
+          <header>
+            <NavBar />
+            <Counter />
+          </header>
+          <main>
+            { props.children }
+          </main>
+        </CounterState>
+          <footer></footer>
       </div>
-);
+)};
