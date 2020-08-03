@@ -31,9 +31,6 @@ export const NavBar = () => {
     return (
       <React.Fragment >
         <nav className='nav-bar'>
-          <div className="nav-bar--brend">
-            <NavLink exact to="/" className="nav-bar--link">Song Bird</NavLink>
-          </div>
           <ul>
             {renderLinks()}
           </ul>
