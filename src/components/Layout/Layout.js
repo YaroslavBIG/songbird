@@ -1,8 +1,10 @@
 import React from 'react';
-import { NavBar } from 'components/NavBar/NavBar';
-import { Counter } from 'components/Counter/Counter';
-import { CounterState } from 'components/hoc/CounterState';
-import { Logo } from 'components/Logo/Logo';
+import {
+  NavBar,
+  Counter,
+  CounterState,
+  Logo
+} from '../';
 
 export const Layout = (props) => {
   console.log(props)

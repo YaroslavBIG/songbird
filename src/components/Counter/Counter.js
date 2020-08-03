@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScoreConsumer } from '../hoc/CounterState';
+import { ScoreConsumer } from '../';
 
 export const Counter = (props) => (
   <ScoreConsumer>

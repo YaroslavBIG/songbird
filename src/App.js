@@ -1,6 +1,6 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
-import { Layout } from 'components/Layout/Layout';
+import {Layout} from './components';
 import './App.scss';
 import {Home, QuizPage} from './Pages';
 import {Train} from './Pages';

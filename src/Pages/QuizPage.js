@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ScoreContext } from 'components/hoc/CounterState';
+import { ScoreContext } from '../components';
 
 export const QuizPage = (props) => {
 const {addCounter} = useContext(ScoreContext)
