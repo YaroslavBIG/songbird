@@ -1,3 +1,10 @@
-.nav-bar--link {
+.nav-bar {
+  @extend %space-around;
+  &--link {
     color:  #ce1f1f;
+  };
+  &-link--active {
+    color: #1fce7c;
+  }
 }
+

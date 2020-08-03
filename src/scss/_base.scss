@@ -7,6 +7,8 @@ form{
 body{
   height: 100vh;
   width: 100vw;
+  background-color: #222;
+  color: white;
 }
 #root{
   height: inherit;
@@ -15,4 +17,10 @@ body{
 }
 *{
   box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
 }

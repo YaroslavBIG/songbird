@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactPlayer from 'react-player/lazy'
 
-export const Player = (props) => {
+export const Player = ({url}) => {
+  console.log(url)
   return (
-    <ReactPlayer url={props.url} />
+    <ReactPlayer url={url} />
   )
 }

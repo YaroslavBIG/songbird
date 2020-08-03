@@ -5,7 +5,6 @@ export const QuizPage = (props) => {
 const {addCounter} = useContext(ScoreContext)
   return (
     <div>
-        <h1>{props.title}</h1>
         <div className="question-block">
           <div className="question-block--photo"></div>
           <div className="question-block--sound">

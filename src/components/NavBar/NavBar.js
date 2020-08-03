@@ -15,7 +15,7 @@ export const NavBar = () => {
 
   const renderLinks = () => {
     return links.map((link, idx) => (
-      <li key={idx}>
+      <div key={idx}>
         <NavLink
         to={link.to}
         exact={link.exact}
@@ -24,16 +24,14 @@ export const NavBar = () => {
         >
           {link.label}
         </NavLink>
-      </li>
+      </div>
     ))
   };
 
     return (
       <React.Fragment >
         <nav className='nav-bar'>
-          <ul>
             {renderLinks()}
-          </ul>
         </nav>
       </React.Fragment >
     )
