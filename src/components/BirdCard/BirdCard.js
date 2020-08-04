@@ -1,9 +1,8 @@
 import React from 'react';
 import { Player } from '../';
-import {birdsData} from '../../data/data';
 
-export const BirdCard = () => {
-  const {image, name, species, description, audio} = birdsData[0][0];
+export const BirdCard = (props) => {
+  const {image, name, species, description, audio} = props;
   return (
     <div className="bird-card">
       <div className="bird-properties">

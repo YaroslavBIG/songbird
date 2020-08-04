@@ -1,24 +1,19 @@
 import React, { useContext } from 'react';
-import { ScoreContext, Player, Quiz, BirdCard, ButtonNext } from '../components';
+import { ScoreContext, Quiz, BirdCard, ButtonNext } from '../components';
+import { QustionBlock } from 'components/QuestionBlock/QuestionBlock';
+import birdsData from 'data/data';
 
 export const QuizPage = (props) => {
 const {addCounter} = useContext(ScoreContext)
+const {image, name, species, description, audio} = birdsData[0][0];
   return (
     <div>
         <div className="question-block">
-          <div className="question-block--photo"></div>
-          <div className="question-block--sound">
-            <div className="sound--photo"></div>
-            <div className="sound--player">
-              <div className="title-bird"></div>
-              <hr/>
-              <div className="player"><Player url={props.url} /></div>
-            </div>
-          </div>
+        <QustionBlock image = {image} name = {name} audio = {audio} />
         </div>
         <div className="quiz-block">
           <Quiz />
-          <BirdCard />
+          <BirdCard image = {image} name = {name} audio = {audio} species = {species} description = {description} />
         </div>
           <ButtonNext />
           <button onClick={ addCounter }>count</button>

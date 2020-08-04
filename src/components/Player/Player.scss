@@ -1,0 +1,42 @@
+.player {
+
+  .seek{
+    display: flex;
+
+    &--range {
+      width: -webkit-fill-available;
+    input {
+      width: -webkit-fill-available;
+    }
+  }
+  }
+  .duration {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .controls{
+    &--options {
+    display: flex;
+    justify-content: space-around;
+    }
+    &--check-box {
+      input {
+        margin-right: 10px;
+      }
+      label {
+        padding-right: 3px;
+      }
+    }
+    .volume {
+      display: flex;
+      span {
+        width: 29px;
+        align-self: center;
+      }
+      input {
+        margin-right: 10px;
+      }
+    }
+}
+}

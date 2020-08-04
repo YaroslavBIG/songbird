@@ -7,7 +7,6 @@ import {
 } from '../';
 
 export const Layout = (props) => {
-  console.log(props)
  return (
       <div className="container">
         <CounterState>

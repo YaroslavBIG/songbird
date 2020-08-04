@@ -1,0 +1,22 @@
+.question-block {
+margin-bottom: 9%;
+
+&--sound {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.sound--photo {
+  display: contents;
+
+  img {
+    width: 30%;
+    height: 30%;
+  }
+};
+
+.sound--player {
+  width: 55%;
+}
+}
