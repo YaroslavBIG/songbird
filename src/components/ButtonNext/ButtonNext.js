@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
+import { ScoreContext } from 'components/';
 
-export class ButtonNext extends Component {
-
-  render() {
+export const ButtonNext = () => {
+  const {addCounter} = useContext(ScoreContext)
     return (
-      <button>Next Level</button>
+      <button className='button--next' onClick={ addCounter }>Next Level</button>
     );
-  };
 };

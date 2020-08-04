@@ -5,15 +5,16 @@ form{
   font: inherit;
 }
 body{
-  height: 100vh;
+  height: 97vh;
   width: 100vw;
   background-color: #222;
   color: white;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 #root{
-  height: inherit;
   width: inherit;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 *{
   box-sizing: border-box;
