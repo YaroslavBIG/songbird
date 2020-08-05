@@ -15,19 +15,10 @@
     justify-content: space-between;
   }
 
-  .controls{
+  .controls {
     &--options {
     display: flex;
     justify-content: space-around;
-    }
-    &--check-box {
-      input {
-        margin-right: 10px;
-      }
-      label {
-        padding-right: 3px;
-      }
-    }
     .volume {
       display: flex;
       span {
@@ -37,6 +28,27 @@
       input {
         margin-right: 10px;
       }
+      }
     }
-}
+    &--check-box {
+      input {
+        margin-right: 10px;
+      }
+      label {
+        padding-right: 3px;
+      }
+    }
+
+    &--play {
+      .button-play {
+        width: 40px;
+        margin: 5px;
+        cursor: pointer;
+
+        img {
+          width: -webkit-fill-available;
+        }
+      }
+    }
+  }
 }

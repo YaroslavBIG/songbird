@@ -23,5 +23,9 @@ body{
 .container {
   display: flex;
   flex-direction: column;
-  padding: 25px;
+  padding: 0 25px 25px 25px;
+}
+
+a.disabled {
+  pointer-events: none;
 }

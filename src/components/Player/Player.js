@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player/lazy'
 import { Duration } from './Duration';
-
-// export const Player = ({url}) => {
-//   console.log(url)
-//   return (
-//     <ReactPlayer url={url} controls={true} width='210px' height='30px' className='react-player'/>
-//   )
-// }
+import playImg from "../../img/play_circle_outline-black-24dp.svg";
+import pauseImg from "../../img/pause_circle_outline-black-24dp.svg";
 
 export class Player extends Component {
   state = {
@@ -159,7 +154,12 @@ export class Player extends Component {
           </div>
               <div className="seek">
               <div className="controls--play">
-                <button onClick={this.handlePlayPause}>{playing ? 'Pause' : 'Play'}</button>
+                <div onClick={this.handlePlayPause} className='button-play'>{playing ?
+                <img src={pauseImg} alt="pause"/>
+                :
+                <img src={playImg} alt="play"/>
+                }
+                </div>
               </div>
               <div className="seek--range">
                 <input
