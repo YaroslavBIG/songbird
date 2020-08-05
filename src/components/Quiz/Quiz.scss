@@ -4,8 +4,14 @@
     flex-basis: 50%;
   }
 
+  &--quiz {
+    @extend %block-background;
+    margin-right: 2%;
+  }
+
   .bird-card {
     flex-basis: 50%;
+    @extend %block-background;
   }
 
   .bird-properties {

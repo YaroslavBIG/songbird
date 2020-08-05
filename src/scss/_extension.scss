@@ -2,5 +2,11 @@
   display: flex;
   justify-content: space-between;
   margin: 25px;
+};
 
+%block-background {
+  background-color: #fefffe2e;
+  border-radius: 17px;
+  padding: 7px;
+  align-content: center;
 }

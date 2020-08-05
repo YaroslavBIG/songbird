@@ -9,7 +9,7 @@ export const QustionBlock = (props) => {
       <div className="question-block--sound">
         <div className="sound--photo"><img src={image} alt={name}/> </div>
         <div className="sound--player">
-        <div className="title-bird">{name}</div>
+        <h1 className="title-bird">{name}</h1>
           <hr/>
           <Player url={audio} controls={true}/>
         </div>

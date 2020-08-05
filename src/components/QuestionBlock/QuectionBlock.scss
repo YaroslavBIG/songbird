@@ -1,5 +1,6 @@
 .question-block {
 margin-bottom: 2%;
+@extend %block-background;
 
 &--sound {
   display: flex;
