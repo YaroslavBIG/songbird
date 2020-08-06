@@ -1,16 +1,17 @@
 import React from 'react';
+import { birdsData } from '../../data/data';
 
 export const Quiz = (props) => {
+console.log(props.pageId);
+const {pageId ,qustionNum, setQestionNum} = props;
 
+const answers = birdsData[pageId].map((el, idx) => (
+<li key={el.id} onClick={()=> setQestionNum(qustionNum + 1)}>{el.name}</li>
+))
   return (
     <div className="quiz-block--quiz">
       <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
+        {answers}
       </ul>
     </div>
   );
