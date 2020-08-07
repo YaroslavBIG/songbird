@@ -19,7 +19,7 @@ export const NavBar = () => {
         <NavLink
         to={link.to}
         exact={link.exact}
-        className="nav-bar--link" //disabled
+        className="nav-bar--link disabled"
         activeClassName={'nav-bar-link--active'}
         >
           {link.label}

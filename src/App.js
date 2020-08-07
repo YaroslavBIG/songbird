@@ -2,13 +2,12 @@ import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import {Layout} from './components';
 import {Home, QuizPage} from './Pages';
-import {Train} from './Pages';
 
 const App = () => (
   <Layout>
     <Switch>
       <Route path='/train' render={(props) =>
-        <Train {...props} title='train' key='train'/>} />
+        <QuizPage {...props} title={'train'} pageId={0} />} />
       <Route path='/passeridae' render={(props) =>
         <QuizPage {...props} title={'Passeridae'} pageId={1} />} />
       <Route path='/forestbirds' component={(props) =>
