@@ -9,7 +9,7 @@ const App = () => (
     <Switch>
       <Route path='/train' render={(props) =>
         <Train {...props} title='train' key='train'/>} />
-      <Route exact path='/passeridae' render={(props) =>
+      <Route path='/passeridae' render={(props) =>
         <QuizPage {...props} title={'Passeridae'} pageId={1} />} />
       <Route path='/forestbirds' component={(props) =>
         <QuizPage {...props} title={'Forestbirds'} pageId={2}/>} />
@@ -19,7 +19,7 @@ const App = () => (
         <QuizPage {...props} title={'Preybirds'} pageId={4}/>} />
       <Route path='/seabirds' component={(props) =>
         <QuizPage {...props} title={'Seabirds'} pageId={5}/>} />
-      <Route path='/' component={Home} key='home' />
+      <Route exact path='/' component={Home} key='home' />
     </Switch>
   </Layout>
 );
