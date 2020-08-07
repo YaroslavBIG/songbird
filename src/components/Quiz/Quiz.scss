@@ -7,6 +7,49 @@
   &--quiz {
     @extend %block-background;
     margin-right: 2%;
+    ul {
+      height: 100%;
+      margin: 0;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      height: 4em;
+      padding-left: 14px;
+      border-radius: 15px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      -ms-border-radius: 15px;
+      -o-border-radius: 15px;
+
+      &:hover{
+        background-color: rgba(250, 244, 244, 0.13);
+      }
+    };
+  }
+
+  .answer {
+    &--check:before {
+      content: url(../../img/lens-black-18dp.svg);
+      width: 2rem;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+
+    &--wrong::before {
+      content: url(../../img/circle_outline-wrong-24dp.svg);
+      width: 2rem;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+
+    &--right::before {
+      content: url(../../img/check_circle-black-18dp.svg);
+      width: 2rem;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
   }
 
   .bird-card {
