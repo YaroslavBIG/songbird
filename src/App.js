@@ -10,15 +10,15 @@ const App = () => (
         <QuizPage {...props} title={'train'} pageId={0} />} />
       <Route path='/passeridae' render={(props) =>
         <QuizPage {...props} title={'Passeridae'} pageId={1} />} />
-      <Route path='/forestbirds' component={(props) =>
+      <Route path='/forestbirds' render={(props) =>
         <QuizPage {...props} title={'Forestbirds'} pageId={2}/>} />
-      <Route path='/songbirds' component={(props) =>
+      <Route path='/songbirds' render={(props) =>
         <QuizPage {...props} title={'Songbirds'} pageId={3}/>} />
-      <Route path='/preybirds' component={(props) =>
+      <Route path='/preybirds' render={(props) =>
         <QuizPage {...props} title={'Preybirds'} pageId={4}/>} />
-      <Route path='/seabirds' component={(props) =>
+      <Route path='/seabirds' render={(props) =>
         <QuizPage {...props} title={'Seabirds'} pageId={5}/>} />
-      <Route exact path='/' component={Home} key='home' />
+      <Route path='/' render={Home} key='home' />
     </Switch>
   </Layout>
 );

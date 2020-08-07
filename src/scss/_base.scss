@@ -32,6 +32,10 @@ body{
 
 a.disabled {
   pointer-events: none;
+  display: table-cell;
+  height: 30px;
+  vertical-align: middle;
+  min-width: 125px;
 }
 
 a {

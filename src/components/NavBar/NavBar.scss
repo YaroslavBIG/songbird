@@ -12,19 +12,26 @@
   margin-left: -5px;
 
   &--link{
-    color:  #1fabce;
-  };
+    color: white;
+  }
+
   &-link--active {
-    color: #ce421f;
+    background-color: blue;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 14px;
   }
 
   div {
-    background-color: bisque;
     border-radius: 14px;
     padding: 8px;
     margin: 6px;
     min-width: 125px;
     text-align: center;
+  }
+
+  .active{
+    background-color: bisque;
   }
 }
 
