@@ -2,14 +2,16 @@ import React from 'react';
 import { birdsData } from '../../data/data';
 
 export const Quiz = (props) => {
-const {pageId, qustionNum, success, setSuccess, setChecked} = props;
+const {pageId, qustionNum, success, setSuccess, setChecked, setSelectedAnswer} = props;
 
 const answerCheck = (id, ev) => {
   if (id === qustionNum + 1) {
     setSuccess(true)
-  }
- if (!success) ev.target.className = id === qustionNum + 1 ? 'answer--right' : 'answer--wrong';
- setChecked(true)
+  };
+
+  if (!success) ev.target.className = id === qustionNum + 1 ? 'answer--right' : 'answer--wrong';
+  setChecked(true);
+  setSelectedAnswer(id);
 }
 
 const answers = birdsData[pageId].map((el, idx) => (

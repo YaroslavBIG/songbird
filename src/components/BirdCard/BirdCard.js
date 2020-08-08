@@ -1,8 +1,12 @@
 import React from 'react';
 import { Player } from '../';
+import birdsData from 'data/data';
 
 export const BirdCard = (props) => {
-  const {image, name, species, description, audio, checked, setChecked} = props;
+  const { selectedAnswer, checked } = props;
+  const pageId = checked ? props.pageId : 6;
+  const {image, name, species, description, audio} = birdsData[pageId][selectedAnswer - 1];
+
   return (
     <div className="bird-card">
       {!checked &&
