@@ -3,6 +3,7 @@ import {Switch, Route} from 'react-router-dom';
 import {Layout} from './components';
 import {Home, QuizPage} from './Pages';
 import { NotFound } from 'components/NotFound/NotFound';
+import { FinalPage } from 'components/PageEnd/FinalPage';
 
 const App = () => (
   <Layout>
@@ -19,7 +20,9 @@ const App = () => (
         <QuizPage {...props} title={'Preybirds'} pageId={4}/>} />
       <Route path='/seabirds' render={(props) =>
         <QuizPage {...props} title={'Seabirds'} pageId={5}/>} />
-      <Route exact path='/' render={Home} key='home' />
+      <Route path='/final' render={(props) =>
+        <FinalPage {...props} title={'FinalPage'} />} />
+      <Route exact path='/' render={(props) => <Home {...props} title={'Home Page'} />} key='home' />
       <Route path="*" component={NotFound} />
     </Switch>
   </Layout>

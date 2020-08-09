@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { birdsData } from '../../data/data';
 import { useContext } from 'react';
-import { ScoreConsumer } from 'components/hoc/CounterState';
+import { ScoreContext } from 'components/hoc/CounterState';
 
 export const Quiz = (props) => {
 const {pageId, qustionNum, success, setSuccess, setChecked, setSelectedAnswer} = props;
-const { addCounter } = useContext(ScoreConsumer);
+const { addCounter } = useContext(ScoreContext);
 const [scoreNow, setScoreNow] = useState(5);
 
 const answerRight = () => {
@@ -18,7 +18,8 @@ const answerWrong = () => {
   return 'answer--wrong';
 }
 
-const answerCheck = (id, ev) => {
+const answerCheck = (ev) => {
+  const id = parseInt(ev.target.id, 10);
   if (id === qustionNum + 1) {
     setSuccess(true)
   };
@@ -29,7 +30,7 @@ const answerCheck = (id, ev) => {
 }
 
 const answers = birdsData[pageId].map((el, idx) => (
-<div className={'answer--check'} key={el.id.toString() + qustionNum} id={el.id} onClick={(ev)=> answerCheck(el.id, ev)}>{el.name}</div>
+<div className={'answer--check'} key={el.id.toString() + qustionNum} id={el.id} onClick={(ev)=> answerCheck(ev)}>{el.name}</div>
 ))
   return (
     <div className="quiz-block--quiz">
