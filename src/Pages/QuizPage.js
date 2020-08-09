@@ -45,6 +45,7 @@ export const QuizPage = (props) => {
             qustionNum={qustionNum}
             success={success}
             setSuccess={setSuccess}
+            setChecked = {setChecked}
           />
     </div>
 )};

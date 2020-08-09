@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const Home = () => {
+export const Home = (props) => {
   return (
     <React.Fragment>
         <h1>Home</h1>

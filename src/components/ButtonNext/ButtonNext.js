@@ -4,7 +4,7 @@ import { NavLink, withRouter } from 'react-router-dom';
 import { randomInteger } from 'utils/randomInteger';
 
 const ButtonNext = (props) => {
-  const {setQestionNum, success, setSuccess, pageId, text} = props;
+  const {setChecked, setQestionNum, success, setSuccess, pageId, text} = props;
   const link = links[pageId + 1];
   const clickButtonNext = () => {
     if(pageId === 5 && success) {
@@ -18,16 +18,8 @@ const ButtonNext = (props) => {
     if (success || text) {
       setSuccess(false);
       setQestionNum(randomInteger(0, 5));
+      setChecked(false);
       props.history.push(link.to)
-      return (
-        <NavLink
-          to={link.to}
-          pageId={link.pageId}
-          label={link.label}
-          checked={false}
-        ></NavLink>
-      )
-
     }
   }
     return (

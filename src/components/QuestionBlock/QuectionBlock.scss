@@ -1,5 +1,7 @@
 .question-block {
 margin-bottom: 2%;
+min-width: 94vw;
+max-width: 94vw;
 @extend %block-background;
 
 &--sound {

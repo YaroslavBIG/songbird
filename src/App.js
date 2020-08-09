@@ -21,8 +21,9 @@ const App = () => (
       <Route path='/seabirds' render={(props) =>
         <QuizPage {...props} title={'Seabirds'} pageId={5}/>} />
       <Route path='/final' render={(props) =>
-        <FinalPage {...props} title={'FinalPage'} />} />
-      <Route exact path='/' render={(props) => <Home {...props} title={'Home Page'} />} key='home' />
+        <FinalPage {...props} title={'FinalPage'} pageId={6}/>} />
+      <Route exact path='/' render={(props) =>
+         <Home {...props} title={'Home Page'} />} />
       <Route path="*" component={NotFound} />
     </Switch>
   </Layout>
