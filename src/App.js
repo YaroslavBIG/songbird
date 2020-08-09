@@ -2,6 +2,7 @@ import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import {Layout} from './components';
 import {Home, QuizPage} from './Pages';
+import { NotFound } from 'components/NotFound/NotFound';
 
 const App = () => (
   <Layout>
@@ -18,7 +19,8 @@ const App = () => (
         <QuizPage {...props} title={'Preybirds'} pageId={4}/>} />
       <Route path='/seabirds' render={(props) =>
         <QuizPage {...props} title={'Seabirds'} pageId={5}/>} />
-      <Route path='/' render={Home} key='home' />
+      <Route exact path='/' render={Home} key='home' />
+      <Route path="*" component={NotFound} />
     </Switch>
   </Layout>
 );

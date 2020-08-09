@@ -1,3 +1,4 @@
+import ButtonNext from './ButtonNext/ButtonNext';
 export {NavBar} from './NavBar/NavBar';
 export {BirdCard} from './BirdCard/BirdCard';
 export {CounterState, ScoreConsumer, ScoreContext} from './hoc/CounterState';
@@ -6,4 +7,4 @@ export {Logo} from './Logo/Logo';
 export {Layout} from './Layout/Layout';
 export {Player} from './Player/Player';
 export {Quiz} from './Quiz/Quiz';
-export {ButtonNext} from './ButtonNext/ButtonNext';
+export {ButtonNext};

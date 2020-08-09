@@ -38,6 +38,7 @@ export const QuizPage = (props) => {
             />
         </div>
           <ButtonNext
+            pageId = {pageId}
             setQestionNum={setQestionNum}
             qustionNum={qustionNum}
             success={success}

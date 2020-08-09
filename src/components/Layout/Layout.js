@@ -20,7 +20,7 @@ export const Layout = (props) => {
           <main>
             { props.children }
           </main>
-          </CounterState>
-          <footer></footer>
+        </CounterState>
+        <footer></footer>
       </div>
 )};

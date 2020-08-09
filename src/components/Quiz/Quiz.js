@@ -1,15 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { birdsData } from '../../data/data';
+import { useContext } from 'react';
+import { ScoreConsumer } from 'components/hoc/CounterState';
 
 export const Quiz = (props) => {
 const {pageId, qustionNum, success, setSuccess, setChecked, setSelectedAnswer} = props;
+const { addCounter } = useContext(ScoreConsumer);
+const [scoreNow, setScoreNow] = useState(5);
+
+const answerRight = () => {
+  addCounter(scoreNow);
+  return 'answer--right';
+}
+
+const answerWrong = () => {
+  scoreNow > 0 ? setScoreNow(scoreNow - 1) : setScoreNow(0);
+  return 'answer--wrong';
+}
 
 const answerCheck = (id, ev) => {
   if (id === qustionNum + 1) {
     setSuccess(true)
   };
 
-  if (!success) ev.target.className = id === qustionNum + 1 ? 'answer--right' : 'answer--wrong';
+  if (!success) ev.target.className = id === qustionNum + 1 ? answerRight() : answerWrong();
   setChecked(true);
   setSelectedAnswer(id);
 }

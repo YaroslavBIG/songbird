@@ -13,8 +13,8 @@ export class CounterState extends Component {
   }
 
 
-addCounter = () => (
-  this.setState(prevState => ({count: prevState.count + 1}))
+addCounter = (value) => (
+  this.setState(prevState => ({count: prevState.count + value}))
   );
 
 clearCounter = () => {
