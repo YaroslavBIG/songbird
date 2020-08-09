@@ -24,7 +24,7 @@ const ButtonNext = (props) => {
     }
   }
     return (
-      <button className={'button--next' + (success ? ' active' : '')} onClick={ () => clickButtonNext() }>{text ? text : 'Next Level'}</button>
+      <button className={`button--next${success ? ' button-next--active' : ''}`} onClick={ () => clickButtonNext() }>{text ? text : 'Next Level'}</button>
     );
 };
 
