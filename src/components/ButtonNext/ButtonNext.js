@@ -6,6 +6,7 @@ import { randomInteger } from 'utils/randomInteger';
 const ButtonNext = (props) => {
   const {setChecked, setQestionNum, success, setSuccess, pageId, text} = props;
   const link = links[pageId + 1];
+
   const clickButtonNext = () => {
     if(pageId === 5 && success) {
       props.history.push('/final');
@@ -23,7 +24,7 @@ const ButtonNext = (props) => {
     }
   }
     return (
-      <button className='button--next' onClick={ () => clickButtonNext() }>{text ? text : 'Next Level'}</button>
+      <button className={'button--next' + (success ? ' active' : '')} onClick={ () => clickButtonNext() }>{text ? text : 'Next Level'}</button>
     );
 };
 
