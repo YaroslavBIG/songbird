@@ -40,13 +40,32 @@
     }
 
     &--play {
+
       .button-play {
         width: 40px;
         margin: 5px;
         cursor: pointer;
-
+        transition: ease-in-out 1s;
+      -webkit-transition: ease-in-out 1s;
+      -moz-transition: ease-in-out 1s;
+      -ms-transition: ease-in-out 1s;
+      -o-transition: ease-in-out 1s;
         img {
           width: -webkit-fill-available;
+          &:hover {
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -o-transform: scale(1.1);
+          }
+          &:active {
+            transform: scale(0.9);
+            -webkit-transform: scale(0.9);
+            -moz-transform: scale(0.9);
+            -ms-transform: scale(0.9);
+            -o-transform: scale(0.9);
+}
         }
       }
     }
