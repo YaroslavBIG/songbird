@@ -3,7 +3,7 @@ import { Player } from '../';
 import birdsData from 'data/data';
 
 export const BirdCard = (props) => {
-  const { selectedAnswer, checked } = props;
+  const { selectedAnswer, checked, playNow, setPlayNow } = props;
   const pageId = checked ? props.pageId : 6;
   const {image, name, species, description, audio} = birdsData[pageId][selectedAnswer - 1];
 
@@ -29,7 +29,11 @@ export const BirdCard = (props) => {
             </div>
             <div className="bird-properties--bird">
               <div className="bird-properties--voice">
-                <Player url={audio}/>
+                <Player
+                  url={audio}
+                  playNow = {playNow}
+                  setPlayNow = {setPlayNow}
+                />
               </div>
             </div>
           </div>

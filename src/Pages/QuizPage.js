@@ -10,13 +10,20 @@ export const QuizPage = (props) => {
   const [success, setSuccess] = useState(false);
   const [checked, setChecked] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(1);
+  const [playNow, setPlayNow] = useState(false);
   console.log(birdsData[pageId][qustionNum].name)
   const {image, name, species, description, audio} = birdsData[pageId][qustionNum];
 
   return (
     <div>
         <div className="question-block">
-        <QustionBlock image = {image} name = {name} audio = {audio} success = {success} />
+        <QustionBlock
+        image = {image}
+        name = {name}
+        audio = {audio}
+        success = {success}
+        playNow = {playNow}
+        setPlayNow = {setPlayNow} />
         </div>
         <div className="quiz-block">
           <Quiz
@@ -37,6 +44,8 @@ export const QuizPage = (props) => {
             checked = {checked}
             setChecked = {setChecked}
             selectedAnswer = {selectedAnswer}
+            playNow = {playNow}
+            setPlayNow = {setPlayNow}
             />
         </div>
           <ButtonNext

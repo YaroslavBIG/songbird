@@ -30,7 +30,13 @@ export class Player extends Component {
   }
 
   handlePlayPause = () => {
-    this.setState({ playing: !this.state.playing })
+    if(!this.props.playNow) {
+      this.props.setPlayNow(true)
+      this.setState({ playing: !this.state.playing })
+    }
+    else {
+      this.setState({ playing: false})
+    }
   }
 
   handleStop = () => {
@@ -76,10 +82,14 @@ export class Player extends Component {
   }
 
   handlePlay = () => {
-    this.setState({ playing: true })
+    if(!this.props.playNow) {
+      this.props.setPlayNow(true)
+      this.setState({ playing: true })
+    }
   }
 
   handlePause = () => {
+    this.props.setPlayNow(false)
     this.setState({ playing: false })
   }
 

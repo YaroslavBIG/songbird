@@ -3,7 +3,7 @@ import { Player } from 'components/Player/Player';
 import defaultBird from '../../img/deault_bird.jpg'
 
 export const QustionBlock = (props) => {
-  const { audio, success} = props;
+  const { audio, success, playNow, setPlayNow} = props;
   const image = success ? props.image : defaultBird;
   const name = success ? props.name : '******';
   return (
@@ -14,7 +14,7 @@ export const QustionBlock = (props) => {
         <div className="sound--player">
         <h1 className="title-bird">{name}</h1>
           <hr/>
-          <Player url={audio} controls={true}/>
+          <Player url={audio} controls={true} playNow = {playNow} setPlayNow = {setPlayNow}/>
         </div>
       </div>
     </>
