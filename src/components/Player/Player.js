@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player/lazy'
 import { Duration } from './Duration';
-import playImg from "../../img/play_circle_outline-black-24dp.svg";
-import pauseImg from "../../img/pause_circle_outline-black-24dp.svg";
+import playImg from "img/play_circle_outline-black-24dp.svg";
+import pauseImg from "img/pause_circle_outline-black-24dp.svg";
+import volumeImg from 'img/volume_up-black-24dp.svg';
+import muteImg from 'img/volume_off-black-24dp.svg';
+import loopImg from 'img/sync-black-24dp.svg';
+import loopDisableImg from 'img/sync_disabled-black-24dp.svg';
 
 export class Player extends Component {
   state = {
@@ -73,8 +77,8 @@ export class Player extends Component {
     this.setState({ muted: !this.state.muted })
   }
 
-  handleSetPlaybackRate = e => {
-    this.setState({ playbackRate: parseFloat(e.target.value) })
+  handleSetPlaybackRate = () => {
+    this.setState({ playbackRate: this.state.playbackRate === 1 ? 2 : 1 })
   }
 
   handleTogglePIP = () => {
@@ -187,16 +191,23 @@ export class Player extends Component {
                 </div>
               </div>
               <div className="controls--options">
-                  <button onClick={this.handleSetPlaybackRate}
-                    value={this.state.playbackRate === 1 ? 2 : 1 }>
-                      {this.state.playbackRate}x
-                  </button>
+                  <div onClick={this.handleSetPlaybackRate}>
+                    {playbackRate}x
+                  </div>
 
               <div className="controls--check-box">
-                <label htmlFor='muted'>Muted</label>
-                <input id='muted' type='checkbox' checked={muted} onChange={this.handleToggleMuted} />
-                <label htmlFor='loop'>Loop</label>
-                <input id='loop' type='checkbox' checked={loop} onChange={this.handleToggleLoop} />
+                <div onClick={this.handleToggleMuted}>{muted || volume === 0 ?
+                  <img src={muteImg} alt="mute"/>
+                  :
+                  <img src={volumeImg} alt="volume"/>
+                }
+                </div>
+                <div onClick={this.handleToggleLoop}>{loop ?
+                  <img src={loopImg} alt="loop"/>
+                  :
+                  <img src={loopDisableImg} alt="loop disable"/>
+                  }
+                </div>
               </div>
               <div className="volume">
                 <input type='range' min={0} max={1} step='any' value={volume} onChange={this.handleVolumeChange} />
