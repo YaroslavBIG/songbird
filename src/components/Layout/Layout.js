@@ -3,24 +3,25 @@ import {
   NavBar,
   Counter,
   CounterState,
-  Logo
+  Logo,
 } from '../';
 
 export const Layout = (props) => {
- return (
-      <div className="container">
-        <CounterState>
-          <header>
-            <div className="logo">
-              <Logo />
-              <Counter />
-            </div>
-            <NavBar />
-          </header>
-          <main>
-            { props.children }
-          </main>
-        </CounterState>
-        <footer></footer>
-      </div>
-)};
+  return (
+    <div className="container">
+      <CounterState>
+        <header>
+          <div className="logo">
+            <Logo />
+            <Counter />
+          </div>
+          <NavBar />
+        </header>
+        <main>
+          { props.children }
+        </main>
+      </CounterState>
+      <footer></footer>
+    </div>
+  );
+};

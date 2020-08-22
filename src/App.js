@@ -2,8 +2,8 @@ import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import {Layout} from './components';
 import {Home, QuizPage} from './Pages';
-import { NotFound } from 'components/NotFound/NotFound';
-import { FinalPage } from 'components/PageEnd/FinalPage';
+import {NotFound} from 'components/NotFound/NotFound';
+import {FinalPage} from 'components/PageEnd/FinalPage';
 
 const App = () => (
   <Layout>
@@ -23,7 +23,7 @@ const App = () => (
       <Route path='/final' render={(props) =>
         <FinalPage {...props} title={'FinalPage'} pageId={6}/>} />
       <Route exact path='/' render={(props) =>
-         <Home {...props} title={'Home Page'} />} />
+        <Home {...props} title={'Home Page'} />} />
       <Route path="*" component={NotFound} />
     </Switch>
   </Layout>

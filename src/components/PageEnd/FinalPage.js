@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
-import { ScoreContext } from 'components/hoc/CounterState';
-import { NavLink } from 'react-router-dom';
+import React, {useContext} from 'react';
+import {ScoreContext} from 'components/hoc/CounterState';
+import {NavLink} from 'react-router-dom';
 
 export const FinalPage = (props) => {
-const {count} = useContext(ScoreContext);
-console.log(count)
+  const {count} = useContext(ScoreContext);
+  console.log(count);
   return (
     <div>
       {count < 20 &&
@@ -14,7 +14,7 @@ console.log(count)
         </p>
         <p>Вы можете лучше - попроуйте ещё раз</p>
 
-         <NavLink
+        <NavLink
           text={'Снова'}
           to={'/passeridae'}
           pageId={1}
@@ -25,15 +25,15 @@ console.log(count)
       </>
 
       }
-     {count >= 20 &&
+      {count >= 20 &&
      <>
-        <p>
+       <p>
           Поздравляем Вы набрали макимальное количество баллов - {count}!
-        </p>
-        <p>Вам присвоенно почётное звание - знаток птиц</p>
-        <p>Вернуться на <NavLink to="/">главную</NavLink>?</p>
-      </>
+       </p>
+       <p>Вам присвоенно почётное звание - знаток птиц</p>
+       <p>Вернуться на <NavLink to="/">главную</NavLink>?</p>
+     </>
       }
     </div>
-  )
-}
+  );
+};
