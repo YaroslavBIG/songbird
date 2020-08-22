@@ -65,14 +65,19 @@
       margin-bottom: 16px;
 
       img {
-        width: 60%;
-        height: 60%;
+        width: 200px;
+        height: 175px;
+        display: flex;
+        border-radius: 14px;
+        object-fit: cover;
         border-radius: 14px;
       }
     }
 
     &--name {
-      align-self: center
+      padding: 20px;
+      width: 50%;
+      align-self: center;
     }
 
   }

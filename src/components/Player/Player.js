@@ -171,66 +171,64 @@ export class Player extends Component {
             muted={muted}
             onPlay={this.handlePlay}
             onPause={this.handlePause}
-            onBuffer={() => console.log('onBuffer')}
-            onSeek={(e) => console.log('onSeek', e)}
             onEnded={this.handleEnded}
             onError={(e) => console.log('onError', e)}
             onProgress={this.handleProgress}
             onDuration={this.handleDuration}
           />
         </div>
-        <div className="seek">
-          <div className="controls--play">
-            <div
-              onClick={this.handlePlayPause}
-              className='button-play'>{playing ?
-                <img src={pauseImg} alt="pause"/> :
-                <img src={playImg} alt="play"/>
-              }
-            </div>
-          </div>
-          <div className="seek--range">
-            <input
-              type='range' min={0} max={0.999999} step='any'
-              value={played}
-              onMouseDown={this.handleSeekMouseDown}
-              onChange={this.handleSeekChange}
-              onMouseUp={this.handleSeekMouseUp}
-            />
+        <div className="seek--range">
+          <input
+            type='range' min={0} max={0.999999} step='any'
+            value={played}
+            onMouseDown={this.handleSeekMouseDown}
+            onChange={this.handleSeekChange}
+            onMouseUp={this.handleSeekMouseUp}
+          />
 
-            <div className="duration">
-              <Duration seconds={duration * played} />
-              <Duration seconds={duration} />
-            </div>
+          <div className="duration">
+            <Duration seconds={duration * played} />
+            <Duration seconds={duration} />
           </div>
         </div>
-        <div className="controls--options">
-          <div onClick={this.handleSetPlaybackRate}>
-            {playbackRate}x
+        <div className="controls--play">
+          <div
+            onClick={this.handlePlayPause}
+            className='button-play'>{playing ?
+                <img src={pauseImg} alt="pause"/> :
+                <img src={playImg} alt="play"/>
+            }
           </div>
+          <div className="seek">
+            <div className="controls--options">
+              <div onClick={this.handleSetPlaybackRate}>
+                {playbackRate}x
+              </div>
 
-          <div className="controls--check-box">
-            <div onClick={this.handleToggleMuted}>{muted || volume === 0 ?
+              <div className="controls--check-box">
+                <div onClick={this.handleToggleMuted}>{muted || volume === 0 ?
                   <img src={muteImg} alt="mute"/> :
                   <img src={volumeImg} alt="volume"/>
-            }
-            </div>
-            <div onClick={this.handleToggleLoop}>{loop ?
+                }
+                </div>
+                <div onClick={this.handleToggleLoop}>{loop ?
                   <img src={loopImg} alt="loop"/> :
                   <img src={loopDisableImg} alt="loop disable"/>
-            }
+                }
+                </div>
+              </div>
+              <div className="volume">
+                <input
+                  type='range'
+                  min={0}
+                  max={1}
+                  step='any'
+                  value={volume}
+                  onChange={this.handleVolumeChange}
+                />
+                <span>{parseInt((volume.toFixed(2) * 100), 10)}%</span>
+              </div>
             </div>
-          </div>
-          <div className="volume">
-            <input
-              type='range'
-              min={0}
-              max={1}
-              step='any'
-              value={volume}
-              onChange={this.handleVolumeChange}
-            />
-            <span>{parseInt((volume.toFixed(2) * 100), 10)}%</span>
           </div>
         </div>
       </div>
