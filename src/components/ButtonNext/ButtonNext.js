@@ -8,18 +8,26 @@ const ButtonNext = (props) => {
   const link = links[pageId + 1];
 
   const clickButtonNext = () => {
+    if (pageId === 100) {
+      props.history.push('/');
+      return (
+        <NavLink
+          to={'/'}
+        />
+      );
+    }
     if (pageId === 5 && success) {
       props.history.push('/final');
       return (
         <NavLink
-          to={'\final'}
+          to={'/final'}
         />
       );
     }
     if (success || text) {
       setSuccess(false);
-      setQestionNum(randomInteger(0, 5));
       setChecked(false);
+      setQestionNum(randomInteger(0, 5));
       props.history.push(link.to);
     }
   };

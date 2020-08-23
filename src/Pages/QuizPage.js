@@ -1,18 +1,22 @@
-import React, {useState} from 'react';
-import {Quiz, BirdCard, ButtonNext} from '../components';
+import React, {useState, useContext, useEffect} from 'react';
+import {Quiz, BirdCard, ButtonNext, ScoreContext} from '../components';
 import {QustionBlock} from 'components/QuestionBlock/QuestionBlock';
 import birdsData from 'data/data';
 import {randomInteger} from 'utils/randomInteger';
 
 export const QuizPage = (props) => {
-  const {pageId} = props;
+  const {pageId, clear} = props;
+  const {clearCounter} = useContext(ScoreContext);
   const [qustionNum, setQestionNum] = useState(randomInteger(0, 5));
   const [success, setSuccess] = useState(false);
   const [checked, setChecked] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(1);
   const [playNow, setPlayNow] = useState(false);
   console.log(birdsData[pageId][qustionNum].name);
-  const {image,
+  useEffect(clearCounter, [clear]);
+
+  const {
+    image,
     name,
     species,
     description,
@@ -35,6 +39,7 @@ export const QuizPage = (props) => {
           pageId = {pageId}
           qustionNum = {qustionNum}
           success = {success}
+          checked = {checked}
           setSuccess = {setSuccess}
           setChecked = {setChecked}
           setSelectedAnswer = {setSelectedAnswer}

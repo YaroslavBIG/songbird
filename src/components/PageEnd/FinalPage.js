@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import {ScoreContext} from 'components/hoc/CounterState';
 import {NavLink} from 'react-router-dom';
+import {ButtonNext} from 'components';
 
 export const FinalPage = (props) => {
   const {count} = useContext(ScoreContext);
@@ -20,6 +21,7 @@ export const FinalPage = (props) => {
           pageId={1}
           label={'Воробьиные'}
           checked={false}
+          clear='true'
         >Снова</NavLink>
 
       </>
@@ -31,7 +33,9 @@ export const FinalPage = (props) => {
           Поздравляем Вы набрали макимальное количество баллов - {count}!
        </p>
        <p>Вам присвоенно почётное звание - знаток птиц</p>
-       <p>Вернуться на <NavLink to="/">главную</NavLink>?</p>
+       <ButtonNext
+         success={true}
+         text='На главную' />
      </>
       }
     </div>

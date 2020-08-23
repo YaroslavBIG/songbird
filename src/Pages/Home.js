@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import {Link} from 'react-router-dom';
+import {ScoreContext} from 'components';
 
 export const Home = (props) => {
+  const {clearCounter} = useContext(ScoreContext);
+  useEffect(clearCounter, []);
   return (
     <React.Fragment>
       <h1>Home</h1>

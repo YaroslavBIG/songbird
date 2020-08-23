@@ -1,8 +1,15 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import {ButtonNext} from 'components';
 
 export const NotFound = () => {
   return (
-    <p> Страница не найдена. Вернуться на <NavLink to="/">главную</NavLink>?</p>
+    <>
+      <p> Страница не найдена.</p>
+      <ButtonNext
+        setChecked={false}
+        success={true}
+        pageId={100}
+        text='На главную' />
+    </>
   );
 };

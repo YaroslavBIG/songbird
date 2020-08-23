@@ -1,17 +1,13 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {ScoreContext} from 'components';
 
 export const Train = (props) => {
   const {clearCounter} = useContext(ScoreContext);
-
-  const ClearC = () => {
-    return <></>;
-  };
+  useEffect(clearCounter, []);
 
   return (
     <React.Fragment>
       <h1>Train</h1>
-      <ClearC render={clearCounter} />
     </React.Fragment>
   );
 };

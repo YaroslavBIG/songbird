@@ -204,16 +204,15 @@ export class Player extends Component {
               <div onClick={this.handleSetPlaybackRate}>
                 {playbackRate}x
               </div>
-
+              <div onClick={this.handleToggleLoop}>{loop ?
+                  <img src={loopImg} alt="loop"/> :
+                  <img src={loopDisableImg} alt="loop disable"/>
+              }
+              </div>
               <div className="controls--check-box">
                 <div onClick={this.handleToggleMuted}>{muted || volume === 0 ?
                   <img src={muteImg} alt="mute"/> :
                   <img src={volumeImg} alt="volume"/>
-                }
-                </div>
-                <div onClick={this.handleToggleLoop}>{loop ?
-                  <img src={loopImg} alt="loop"/> :
-                  <img src={loopDisableImg} alt="loop disable"/>
                 }
                 </div>
               </div>

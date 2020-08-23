@@ -41,7 +41,8 @@ export const Quiz = (props) => {
 
   const answers = birdsData[pageId].map((el, idx) => (
     <div
-      className={'answer--check'} key={el.id.toString() + qustionNum}
+      className={'answer--check'}
+      key={idx + pageId + el.id}
       id={el.id}
       onClick={(ev)=> answerCheck(ev)}>{el.name}
     </div>
