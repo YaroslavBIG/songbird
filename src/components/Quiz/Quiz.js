@@ -14,27 +14,36 @@ export const Quiz = (props) => {
   const {addCounter} = useContext(ScoreContext);
   const [scoreNow, setScoreNow] = useState(5);
 
-  const answerRight = () => {
+  const isCicked = (ev) => {
+    const currentClass = ev.target.className;
+    return currentClass === 'answer--wrong' || currentClass === 'answer--right';
+  };
+
+  const answerRight = (ev) => {
+    if (!isCicked(ev)) {
+      addCounter(scoreNow);
+    }
     return 'answer--right';
   };
 
-  const answerWrong = () => {
-  scoreNow > 0 ? setScoreNow(scoreNow - 1) : setScoreNow(0);
-  return 'answer--wrong';
+  const answerWrong = (ev) => {
+    if (!isCicked(ev)) {
+      scoreNow > 0 ? setScoreNow(scoreNow - 1) : setScoreNow(0);
+    }
+    return 'answer--wrong';
   };
 
   const answerCheck = (ev) => {
     const id = parseInt(ev.target.id, 10);
     if (id === qustionNum + 1) {
       setSuccess(true);
-      addCounter(scoreNow);
       setScoreNow(5);
     }
 
     if (!success) {
       ev.target.className = id === qustionNum + 1 ?
-      answerRight() :
-      answerWrong();
+      answerRight(ev) :
+      answerWrong(ev);
     }
     setChecked(true);
     setSelectedAnswer(id);
