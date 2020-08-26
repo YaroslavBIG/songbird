@@ -1,27 +1,23 @@
 .question-block {
-margin-bottom: 2%;
-min-width: 80vw;
-max-width: 95vw;
-@extend %block-background;
+  margin-bottom: 8px;
+  width: 90vw;
+  @extend %block-background;
 
-&--sound {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.sound--photo {
-  display: contents;
-
-  img {
-    width: 30%;
-    height: 30%;
-    align-self: center;
-    border-radius: 14px;
+  &--sound {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
-};
 
-.sound--player {
-  width: 55%;
-}
+  .sound--photo {
+    display: contents;
+
+    img {
+      @extend %bird-img;
+    }
+  };
+
+  .sound--player {
+    width: 55%;
+  }
 }

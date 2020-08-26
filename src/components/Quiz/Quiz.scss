@@ -1,13 +1,13 @@
 .quiz-block {
   display: flex;
-  max-width: 90vw;
+  width: 90vw;
   &--quiz {
     flex-basis: 50%;
   }
 
   &--quiz {
     @extend %block-background;
-    margin-right: 2%;
+    margin-right: 8px;
     ul {
       height: 100%;
       margin: 0;
@@ -26,6 +26,7 @@
 
       &:hover{
         background-color: rgba(250, 244, 244, 0.13);
+        box-shadow: 2px 7px 16px black;
       }
     };
   }
@@ -66,12 +67,7 @@
       margin-bottom: 16px;
 
       img {
-        width: 200px;
-        height: 175px;
-        display: flex;
-        border-radius: 14px;
-        object-fit: cover;
-        border-radius: 14px;
+        @extend %bird-img
       }
     }
 

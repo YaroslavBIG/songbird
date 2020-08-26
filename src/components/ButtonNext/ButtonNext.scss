@@ -1,12 +1,12 @@
 .button--next {
-  margin-top: 10px;
+  margin: 8px 0;
   width: 100%;
   border-radius: 15px;
   outline: none;
 }
 
 .button-next--active {
-  background-color:  #3ff309;
+  background-color: $succes-color;
 }
 
 

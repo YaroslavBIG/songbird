@@ -12,6 +12,8 @@
 }
 
 %player-hover {
+  cursor: pointer;
+  filter: drop-shadow(2px 4px 6px black);
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -20,9 +22,20 @@
 }
 
 %player-active {
+  cursor: pointer;
+  filter: none;
   transform: scale(0.9);
   -webkit-transform: scale(0.9);
   -moz-transform: scale(0.9);
   -ms-transform: scale(0.9);
   -o-transform: scale(0.9);
+  -webkit-filter: none;
+}
+
+%bird-img {
+  width: 200px;
+  height: 175px;
+  border-radius: 14px;
+  object-fit: cover;
+  filter: drop-shadow(2px 4px 6px black);
 }

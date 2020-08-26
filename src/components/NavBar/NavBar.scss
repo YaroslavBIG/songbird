@@ -12,11 +12,12 @@
   -o-border-radius: 14px;
 
   &--link{
-    color: white;
+    color: $link-color;
   }
 
   &-link--active {
-    background-color: blue;
+    color: $link-active-color;
+    background-color: $link-active-bg-color;
     margin: 0 auto;
     text-align: center;
     border-radius: 14px;
@@ -25,13 +26,13 @@
   div {
     border-radius: 14px;
     padding: 8px;
-    margin: 6px;
+    margin: 0 auto;
     min-width: 125px;
     text-align: center;
   }
 
   .active{
-    background-color: bisque;
+    background-color: $link-active-bg-color;
   }
 }
 
