@@ -201,21 +201,23 @@ export class Player extends Component {
           </div>
           <div className="seek">
             <div className="controls--options">
-              <div onClick={this.handleSetPlaybackRate}>
+              <div onClick={this.handleSetPlaybackRate} className="rate">
                 {playbackRate}x
               </div>
-              <div onClick={this.handleToggleLoop}>{loop ?
+              <div onClick={this.handleToggleLoop} className="loop">{loop ?
                   <img src={loopImg} alt="loop"/> :
                   <img src={loopDisableImg} alt="loop disable"/>
               }
               </div>
-              <div className="controls--check-box">
-                <div onClick={this.handleToggleMuted}>{muted || volume === 0 ?
+
+              <div onClick={this.handleToggleMuted}
+                className="mute">
+                {muted || volume === 0 ?
                   <img src={muteImg} alt="mute"/> :
                   <img src={volumeImg} alt="volume"/>
                 }
-                </div>
               </div>
+
               <div className="volume">
                 <input
                   type='range'

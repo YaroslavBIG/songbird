@@ -6,6 +6,28 @@
   flex-wrap: nowrap;
   justify-content: center;
 
+  input[type='range'] {
+    overflow: hidden;
+    width: 80px;
+    -webkit-appearance: none;
+    background-color: #9a905d;
+  }
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 5px;
+    -webkit-appearance: none;
+    color: $nav-bar-color;
+    margin-top: -1px;
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    width: 5px;
+    -webkit-appearance: none;
+    height: 25px;
+    cursor: grab;
+    background: #819c05;
+    box-shadow: -80px 0 0 80px $nav-bar-color;
+  }
+
   .seek{
     display: flex;
       width: -webkit-fill-available;
@@ -24,16 +46,21 @@
   }
 
   .controls {
-    &--play {
-      display: flex;
-      align-items: center;
-      align-self: center;
-      width: -webkit-fill-available;
-    }
     &--options {
     display: flex;
     justify-content: space-around;
     width: -webkit-fill-available;
+    .rate,
+    .loop,
+    .mute,
+    .volume {
+      &:hover {
+        @extend %player-hover;
+       }
+       &:active {
+         @extend %player-active;
+       }
+    }
     .volume {
       display: flex;
       span {
@@ -49,42 +76,17 @@
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
-}
-
-      input[type='range'] {
-        overflow: hidden;
-        width: 80px;
-        -webkit-appearance: none;
-        background-color: #9a905d;
-      }
-      input[type='range']::-webkit-slider-runnable-track {
-        height: 5px;
-        -webkit-appearance: none;
-        color: #13bba4;
-        margin-top: -1px;
       }
 
-      input[type='range']::-webkit-slider-thumb {
-        width: 5px;
-        -webkit-appearance: none;
-        height: 25px;
-        cursor: grab;
-        background: #819c05;
-        box-shadow: -80px 0 0 80px #43e5f7;
-      }
-      }
-    }
-    &--check-box {
-      display: flex;
-      input {
-        margin-right: 10px;
-      }
-      label {
-        padding-right: 3px;
+
       }
     }
 
     &--play {
+      display: flex;
+      align-items: center;
+      align-self: center;
+      width: -webkit-fill-available;
 
       .button-play {
         width: 40px;
@@ -98,19 +100,11 @@
         img {
           width: -webkit-fill-available;
           &:hover {
-            transform: scale(1.1);
-            -webkit-transform: scale(1.1);
-            -moz-transform: scale(1.1);
-            -ms-transform: scale(1.1);
-            -o-transform: scale(1.1);
+           @extend %player-hover;
           }
           &:active {
-            transform: scale(0.9);
-            -webkit-transform: scale(0.9);
-            -moz-transform: scale(0.9);
-            -ms-transform: scale(0.9);
-            -o-transform: scale(0.9);
-}
+            @extend %player-active;
+          }
         }
       }
     }
