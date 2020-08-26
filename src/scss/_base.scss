@@ -16,6 +16,11 @@ body{
   width: inherit;
   overflow: hidden;
 }
+header{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
 *{
   box-sizing: border-box;
   -ms-user-select: none;
@@ -27,7 +32,6 @@ body{
 .container {
   display: flex;
   flex-direction: column;
-  padding: 0 25px 25px 25px;
 }
 
 a.disabled {

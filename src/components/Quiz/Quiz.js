@@ -15,7 +15,6 @@ export const Quiz = (props) => {
   const [scoreNow, setScoreNow] = useState(5);
 
   const answerRight = () => {
-    addCounter(scoreNow);
     return 'answer--right';
   };
 
@@ -28,6 +27,8 @@ export const Quiz = (props) => {
     const id = parseInt(ev.target.id, 10);
     if (id === qustionNum + 1) {
       setSuccess(true);
+      addCounter(scoreNow);
+      setScoreNow(5);
     }
 
     if (!success) {

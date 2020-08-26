@@ -2,14 +2,13 @@
   @extend%space-around;
   display: flex;
   flex-wrap: wrap;
+  max-width: 90vw;
   background-color: #00bc8c;
   border-radius: 14px;
   -webkit-border-radius: 14px;
   -moz-border-radius: 14px;
   -ms-border-radius: 14px;
   -o-border-radius: 14px;
-  width: 100%;
-  margin-left: -5px;
 
   &--link{
     color: white;

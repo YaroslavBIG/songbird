@@ -1,5 +1,6 @@
 .quiz-block {
   display: flex;
+  max-width: 90vw;
   &--quiz {
     flex-basis: 50%;
   }
