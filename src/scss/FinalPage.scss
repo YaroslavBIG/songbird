@@ -1,0 +1,13 @@
+.final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    button {
+        width: 60vw;
+        height: 26px;
+        a {
+            display: block;
+            width: 100%;
+        }
+    }
+}

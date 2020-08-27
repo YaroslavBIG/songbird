@@ -6,25 +6,27 @@ export const Home = (props) => {
   const {clearCounter} = useContext(ScoreContext);
   useEffect(clearCounter, []);
   return (
-    <React.Fragment>
-      <h1>Home</h1>
+    <section className='main-page'>
+      <h1>Добро пожаловать!</h1>
       <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Ipsa illo possimus fugit sunt iusto sapiente,
-           quae voluptatibus praesentium id ducimus. Lorem ipsum dolor sit amet,
-          consectetur adipisicing elit.
-          Possimus fuga, ducimus debitis fugiat sapiente accusantium
-          consequuntur, modi commodi eius
-          qui similique explicabo assumenda consectetur quo
-          voluptatum ipsum voluptate voluptas!
-          Repudiandae in, minima odio dolor harum explicabo soluta.
-          Ab debitis, nostrum praesentium ut velit voluptatum
-          dolorem doloremque, voluptatem earum, perspiciatis minima!
+        Мы рады приветствовать Вас на нашей увлекательной викторине.
       </p>
-      <div className="button--start"><Link to='/train'>Train</Link></div>
+      <p>
+        Вам предстоит ответить на вопросы,
+        вслучае если правильный ответ дан с первого раза,
+        вам начисляется 5 очков, каждый не верный ответ отнимает 1 балл.
+      </p>
+      <p>
+        Для начала игры нажмите кнопку ниже,
+        вы можете выбрать тренеровочный раунд,
+        или сразу приступить к основной викторине.
+      </p>
       <div className="button--start">
-        <Link to='/passeridae'>Start Game</Link>
+        <Link to='/train'>Тренеровка</Link>
       </div>
-    </React.Fragment>
+      <div className="button--start">
+        <Link to='/passeridae'>Начать игру</Link>
+      </div>
+    </section>
   );
 };

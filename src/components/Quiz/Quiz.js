@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import {birdsData} from '../../data/data';
 import {useContext} from 'react';
 import {ScoreContext} from 'components/hoc/CounterState';
+import winSound from 'sounds/winner.mp3';
+import errorSound from 'sounds/error.mp3';
 
 export const Quiz = (props) => {
   const {pageId,
@@ -22,6 +24,8 @@ export const Quiz = (props) => {
   const answerRight = (ev) => {
     if (!isCicked(ev)) {
       addCounter(scoreNow);
+      const audio = new Audio(winSound);
+      audio.play();
     }
     return 'answer--right';
   };
@@ -29,6 +33,8 @@ export const Quiz = (props) => {
   const answerWrong = (ev) => {
     if (!isCicked(ev)) {
       scoreNow > 0 ? setScoreNow(scoreNow - 1) : setScoreNow(0);
+      const audio = new Audio(errorSound);
+      audio.play();
     }
     return 'answer--wrong';
   };
