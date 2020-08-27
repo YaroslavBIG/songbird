@@ -7,6 +7,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    @media screen and (max-width: 563px) {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      width: 100%;
+    }
   }
 
   .sound--photo {
@@ -19,5 +25,8 @@
 
   .sound--player {
     width: 55%;
+    @media screen and (max-width: 563px) {
+      width: unset;
+    }
   }
 }

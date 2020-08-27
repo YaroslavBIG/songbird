@@ -1,13 +1,21 @@
 .quiz-block {
   display: flex;
   width: 90vw;
-  &--quiz {
-    flex-basis: 50%;
-  }
+@media screen and (max-width: 563px) {
+  flex-wrap: wrap;
+}
 
   &--quiz {
     @extend %block-background;
     margin-right: 8px;
+    flex-basis: 50%;
+    @media screen and (max-width: 563px) {
+      flex-basis: unset;
+      margin-right: 0;
+      margin-bottom: 8px;
+      width: 100%;
+    }
+
     ul {
       height: 100%;
       margin: 0;
@@ -57,6 +65,11 @@
   .bird-card {
     flex-basis: 50%;
     @extend %block-background;
+    @media screen and (max-width: 563px) {
+      flex-basis: unset;
+      width: 100%;
+      text-align: center;
+    }
   }
 
   .bird-properties {
@@ -67,7 +80,11 @@
       margin-bottom: 16px;
 
       img {
-        @extend %bird-img
+        @extend %bird-img;
+        @media screen and (max-width: 350px) {
+          width: 50%;
+          height: 50%;
+        }
       }
     }
 

@@ -3,10 +3,13 @@
   width: 100%;
   border-radius: 15px;
   outline: none;
+  filter: brightness(0.5);
 }
 
 .button-next--active {
   background-color: $nav-bar-color;
+  filter: none;
+  -webkit-filter: none;
 }
 
 
