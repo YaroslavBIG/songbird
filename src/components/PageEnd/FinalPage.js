@@ -1,7 +1,6 @@
 import React, {useContext} from 'react';
 import {ScoreContext} from 'components/hoc/CounterState';
 import {NavLink} from 'react-router-dom';
-import {ButtonNext} from 'components';
 import win from 'img/congratulation.gif';
 import lose from 'img/again.gif';
 
@@ -14,7 +13,7 @@ export const FinalPage = (props) => {
         <p>
           Набрано {count} баллов
         </p>
-        <img src={lose} alt="Try Again"/>
+        <img src={lose} alt="Try Again" className='again'/>
         <p>Вы можете лучше - попроуйте ещё раз</p>
         <button className='button--start'>
           <NavLink
@@ -30,13 +29,17 @@ export const FinalPage = (props) => {
       {count >= 25 &&
      <>
        <p>
-          Поздравляем Вы набрали макимальное количество баллов - {count}!
+          Поздравляем Вы ответили верно на все вопросы, ваш счёт - {count}!
        </p>
-       <img src={win} alt="You Win"/>
-       <p>Вам присвоенно почётное звание - знаток птиц</p>
-       <ButtonNext
-         success={true}
-         text='На главную' />
+       <img src={win} alt="You Win" className='win'/>
+
+       <button className='button--start'>
+         <NavLink
+           text={'На главную'}
+           to={'/'}
+           clear='true'
+         >На главную</NavLink>
+       </button>
      </>
       }
     </div>
