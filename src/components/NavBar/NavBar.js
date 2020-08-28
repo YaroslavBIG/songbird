@@ -2,12 +2,12 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 export const links = [
-  {to: '/train', label: 'Тренировка', exact: false, pageId: 0},
-  {to: '/passeridae', label: 'Воробьиные', exact: false, pageId: 1},
-  {to: '/forestbirds', label: 'Лесные птицы', exact: false, pageId: 2},
-  {to: '/songbirds', label: 'Певчие птицы', exact: false, pageId: 3},
-  {to: '/preybirds', label: 'Хищные птицы', exact: false, pageId: 4},
-  {to: '/seabirds', label: 'Морские птицы', exact: false, pageId: 5},
+  {to: '/simpsons', label: 'Simpsons', exact: false, pageId: 0},
+  {to: '/southpark', label: 'South Park', exact: false, pageId: 1},
+  {to: '/futurama', label: 'Futurama', exact: false, pageId: 2},
+  {to: '/rikandmorty', label: 'Rick and Morty', exact: false, pageId: 3},
+  {to: '/americandad', label: 'American Dad', exact: false, pageId: 4},
+  {to: '/familyguy', label: 'Family Guy', exact: false, pageId: 5},
 ];
 
 export const NavBar = () => {

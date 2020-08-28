@@ -1,6 +1,6 @@
 import React from 'react';
 import {Player} from 'components/Player/Player';
-import defaultBird from '../../img/deault_bird.jpg';
+import defaultBird from '../../img/default.png';
 
 export const QustionBlock = (props) => {
   const {audio, success, playNow, setPlayNow} = props;
