@@ -1,6 +1,6 @@
 import React from 'react';
 import {Player} from '../';
-import birdsData from 'data/data';
+import {cartoonsData} from 'data/cartoons';
 
 export const BirdCard = (props) => {
   const {selectedAnswer, checked, playNow, setPlayNow} = props;
@@ -11,7 +11,7 @@ export const BirdCard = (props) => {
     species,
     description,
     audio,
-  } = birdsData[pageId][selectedAnswer - 1];
+  } = cartoonsData[pageId][selectedAnswer - 1];
 
   return (
     <div className="bird-card">

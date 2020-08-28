@@ -1,7 +1,7 @@
 import React, {useState, useContext, useEffect} from 'react';
 import {Quiz, BirdCard, ButtonNext, ScoreContext} from '../components';
 import {QustionBlock} from 'components/QuestionBlock/QuestionBlock';
-import birdsData from 'data/data';
+import {cartoonsData} from 'data/cartoons';
 import {randomInteger} from 'utils/randomInteger';
 
 export const QuizPage = (props) => {
@@ -12,7 +12,7 @@ export const QuizPage = (props) => {
   const [checked, setChecked] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(1);
   const [playNow, setPlayNow] = useState(false);
-  console.log(birdsData[pageId][qustionNum].name);
+  console.log(cartoonsData[pageId][qustionNum].name);
   useEffect(clearCounter, [clear]);
 
   const {
@@ -21,7 +21,7 @@ export const QuizPage = (props) => {
     species,
     description,
     audio,
-  } = birdsData[pageId][qustionNum];
+  } = cartoonsData[pageId][qustionNum];
 
   return (
     <div>

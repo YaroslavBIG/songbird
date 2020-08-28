@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {birdsData} from '../../data/data';
+import {cartoonsData} from 'data/cartoons';
 import {useContext} from 'react';
 import {ScoreContext} from 'components/hoc/CounterState';
 import winSound from 'sounds/winner.mp3';
@@ -55,7 +55,7 @@ export const Quiz = (props) => {
     setSelectedAnswer(id);
   };
 
-  const answers = birdsData[pageId].map((el, idx) => (
+  const answers = cartoonsData[pageId].map((el, idx) => (
     <div
       className={'answer--check'}
       key={idx + pageId + el.id}
