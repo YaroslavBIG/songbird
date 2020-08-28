@@ -97,7 +97,7 @@ export const cartoonsData = [
     },
     {
       id: 6,
-      name: 'Mr. Monty Burns',
+      name: 'Burns',
       species: 'Charles Montgomery Burns',
       description: `
       Identity: Money-grabbing billionaire owner of the Springfield Nuclear Power Plant.
@@ -183,7 +183,7 @@ export const cartoonsData = [
     },
     {
       id: 6,
-      name: 'Mr. Mackey',
+      name: 'Mackey',
       species: 'Mr. Mackey, Junior',
       description: `
       the counselor at South Park Elementary,
@@ -241,7 +241,7 @@ export const cartoonsData = [
     },
     {
       id: 4,
-      name: 'Professor Farnsworth',
+      name: 'Farnsworth',
       species: 'Hubert J. Farnsworth',
       description: `
       Professor Hubert Farnsworth is the oldest living member of The Academy of Professors.
@@ -256,7 +256,7 @@ export const cartoonsData = [
     },
     {
       id: 5,
-      name: 'Amy Wong',
+      name: 'Amy',
       species: 'Amy Kroker (née Wong)',
       description: `
       Amy Wong is a young Mars University student interning at Planet Express.
@@ -273,7 +273,7 @@ export const cartoonsData = [
     },
     {
       id: 6,
-      name: 'Dr. Zoidberg',
+      name: 'Zoidberg',
       species: 'Dr. John A. Zoidberg',
       description: `
       Dr Zoidberg left his home planet to become a rich doctor but instead he became the Planet Express staff doctor.
@@ -363,7 +363,7 @@ export const cartoonsData = [
     },
     {
       id: 6,
-      name: 'Mr. Meeseeks',
+      name: 'Meeseeks',
       species: 'Mr. Meeseeks',
       description: `
       Meeseeks are creatures who are created to serve a singular purpose for which they will go to any length to fulfill.
