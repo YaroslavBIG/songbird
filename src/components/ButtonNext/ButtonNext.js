@@ -4,7 +4,15 @@ import {NavLink, withRouter} from 'react-router-dom';
 import {randomInteger} from 'utils/randomInteger';
 
 const ButtonNext = (props) => {
-  const {setChecked, setQestionNum, setPlayNow, success, setSuccess, pageId, text} = props;
+  const {
+    setChecked,
+    setQestionNum,
+    setPlayNow,
+    success,
+    setSuccess,
+    pageId,
+    text,
+  } = props;
   const link = links[pageId + 1];
 
   const clickButtonNext = () => {
