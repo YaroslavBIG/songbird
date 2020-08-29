@@ -1,0 +1,42 @@
+%space-around {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 25px 8px 25px;
+};
+
+%block-background {
+  background-color: #fefffe2e;
+  border-radius: 17px;
+  padding: 7px;
+  align-content: center;
+}
+
+%player-hover {
+  cursor: pointer;
+  filter: drop-shadow(2px 4px 6px black);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+%player-active {
+  cursor: pointer;
+  filter: none;
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  -webkit-filter: none;
+}
+
+%bird-img {
+  width: 200px;
+  height: 175px;
+  border-radius: 14px;
+  object-fit: contain;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+  filter: drop-shadow(2px 4px 6px black);
+}

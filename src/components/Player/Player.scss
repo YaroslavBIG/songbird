@@ -1,0 +1,104 @@
+.player {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  input[type='range'] {
+    background-color: $palyer-range-inactive-color;
+  }
+
+  .seek{
+    display: flex;
+      width: -webkit-fill-available;
+    &--range {
+      width: -webkit-fill-available;
+      display: flex;
+      flex-direction: column-reverse;
+    input {
+      width: -webkit-fill-available;
+    }
+  }
+  }
+  .duration {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .controls {
+    &--options {
+    display: flex;
+    justify-content: space-around;
+    width: -webkit-fill-available;
+    transition: all ease-in 0.2s;
+    -webkit-transition: all ease-in 0.2s;
+    -moz-transition: all ease-in 0.2s;
+    -ms-transition: all ease-in 0.2s;
+    -o-transition: all ease-in 0.2s;
+    .rate,
+    .loop,
+    .mute,
+    .volume {
+      transition: inherit;
+      -webkit-transition: inherit;
+      -moz-transition: inherit;
+      -ms-transition: inherit;
+      -o-transition: inherit;
+      &:hover{
+        @extend %player-hover;
+       }
+       &:active {
+         @extend %player-active;
+       }
+    }
+    .volume {
+      display: flex;
+      span {
+        width: 29px;
+        align-self: center;
+      }
+      input {
+        margin-right: 5px;
+        align-self: center;
+        height: 5px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+      }
+
+
+      }
+    }
+
+    &--play {
+      display: flex;
+      align-items: center;
+      align-self: center;
+      width: -webkit-fill-available;
+
+      .button-play {
+        width: 40px;
+        margin: 5px;
+        cursor: pointer;
+        transition: ease-in-out 0.5s;
+        -webkit-transition: ease-in-out 0.5s;
+        -moz-transition: ease-in-out 0.5s;
+        -ms-transition: ease-in-out 0.5s;
+        -o-transition: ease-in-out 0.5s;
+        img {
+          width: -webkit-fill-available;
+          &:hover {
+           @extend %player-hover;
+          }
+          &:active {
+            @extend %player-active;
+          }
+        }
+      }
+    }
+  }
+}

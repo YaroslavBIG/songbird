@@ -1,0 +1,99 @@
+.quiz-block {
+  display: flex;
+  width: 90vw;
+@media screen and (max-width: 563px) {
+  flex-wrap: wrap;
+}
+
+  &--quiz {
+    @extend %block-background;
+    margin-right: 8px;
+    flex-basis: 50%;
+    @media screen and (max-width: 563px) {
+      flex-basis: unset;
+      margin-right: 0;
+      margin-bottom: 8px;
+      width: 100%;
+    }
+
+    ul {
+      height: 100%;
+      margin: 0;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      height: 4em;
+      padding-left: 14px;
+      border-radius: 15px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      -ms-border-radius: 15px;
+      -o-border-radius: 15px;
+
+      &:hover{
+        background-color: rgba(250, 244, 244, 0.13);
+        box-shadow: 2px 7px 16px black;
+      }
+    };
+  }
+
+  .answer {
+    &--check:before {
+      content: url(../../img/lens-black-18dp.svg);
+      width: 2rem;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+
+    &--wrong::before {
+      content: url(../../img/circle_outline-wrong-24dp.svg);
+      width: 2rem;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+
+    &--right::before {
+      content: url(../../img/check_circle-black-18dp.svg);
+      width: 2rem;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+  }
+
+  .bird-card {
+    flex-basis: 50%;
+    @extend %block-background;
+    @media screen and (max-width: 563px) {
+      flex-basis: unset;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .bird-properties {
+
+    &--photo {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 16px;
+
+      img {
+        @extend %bird-img;
+        @media screen and (max-width: 350px) {
+          width: 50%;
+          height: 50%;
+        }
+      }
+    }
+
+    &--name {
+      padding: 20px;
+      width: 50%;
+      align-self: center;
+    }
+
+  }
+
+}

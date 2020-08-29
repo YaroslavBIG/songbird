@@ -1,0 +1,38 @@
+.nav-bar {
+  @extend%space-around;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin-top: 0;
+  background-color: $nav-bar-color;
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+
+  &--link{
+    color: $link-color;
+  }
+
+  &-link--active {
+    color: $link-active-color;
+    background-color: $link-active-bg-color;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 14px;
+  }
+
+  div {
+    border-radius: 14px;
+    padding: 8px;
+    margin: 0 auto;
+    min-width: 125px;
+    text-align: center;
+  }
+
+  .active{
+    background-color: $link-active-bg-color;
+  }
+}
+

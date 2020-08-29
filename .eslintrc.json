@@ -1,0 +1,60 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "jsx": true,
+      "impliedStrict": false,
+      "experimentalObjectRestSpread": true
+    },
+    "sourceType": "module"
+  },
+
+  "globals": {
+    "React": true
+  },
+
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "json/sort-package-json": false
+  },
+
+  "plugins": [
+    "react"
+  ],
+
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "google"
+  ],
+
+  "rules": {
+    "strict": 0,
+    "no-invalid-this": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "@typescript-eslint/interface-name-prefix" : "off",
+    "react/jsx-props-no-spreading" : "off",
+    "require-jsdoc": 0,
+    "react/jsx-no-bind" : ["error", {
+      "allowArrowFunctions": true,
+      "allowBind": false,
+      "ignoreRefs": true
+    }],
+    "react/no-did-update-set-state": "error",
+    "react/no-unknown-property": "error",
+    "react/no-unused-prop-types": 0,
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": "error"
+  }
+}

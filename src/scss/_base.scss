@@ -1,0 +1,47 @@
+form{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
+body{
+  height: 97vh;
+  width: 100vw;
+  background-color: $background-color;
+  color: $font-main-color;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#root{
+  width: inherit;
+  overflow: hidden;
+}
+header{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+*{
+  box-sizing: border-box;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+a.disabled {
+  pointer-events: none;
+  display: table-cell;
+  height: 30px;
+  vertical-align: middle;
+  min-width: 125px;
+}
+
+a {
+  text-decoration: none;
+}

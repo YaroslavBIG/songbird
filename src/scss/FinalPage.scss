@@ -1,0 +1,22 @@
+.final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    button {
+        width: 60vw;
+        height: 26px;
+        a {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.again {
+  width: 35vw;
+}
+
+.win {
+  width: 35vw;
+  margin-bottom: 8px;
+}
