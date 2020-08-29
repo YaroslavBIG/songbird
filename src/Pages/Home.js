@@ -7,17 +7,17 @@ export const Home = (props) => {
   useEffect(clearCounter, []);
   return (
     <section className='main-page'>
-      <h1>Добро пожаловать!</h1>
+      <h1>Welcome!</h1>
       <p>
-        Мы рады приветствовать Вас на нашей увлекательной викторине.
+        We are happy to welcome You to our exciting quiz.
       </p>
       <p>
-        Вам предстоит угадать персонажей мультфильмов по голосу,
-        вслучае если правильный ответ дан с первого раза,
-        вам начисляется 5 очков, каждый не верный ответ отнимает 1 балл.
+        You will have to guess the cartoon characters by voice,
+        if the correct answer is given the first time,
+        you are awarded 5 points, each incorrect answer takes away 1 point.
       </p>
       <p>
-        Для начала игры нажмите кнопку ниже,
+      To start the game, click Start button.
       </p>
       <div className="button--start">
         <Link to='/simpsons'>Start</Link>

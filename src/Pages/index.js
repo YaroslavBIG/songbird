@@ -1,3 +1,3 @@
 export {Home} from './Home';
-export {Train} from './Train';
 export {QuizPage} from './QuizPage';
+export {FinalPage} from 'components/PageEnd/FinalPage';

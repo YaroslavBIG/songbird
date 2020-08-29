@@ -11,13 +11,13 @@ export const FinalPage = (props) => {
       {count < 30 &&
       <>
         <p>
-          Набрано {count} баллов из возможных 30
+          Scored 30 points out of a possible 30
         </p>
         <img src={lose} alt="Try Again" className='again'/>
-        <p>Вы можете лучше - попроуйте ещё раз</p>
+        <p>You can do better - try again</p>
         <button className='button--start'>
           <NavLink
-            text={'Снова'}
+            text={'Again'}
             to={'/simpsons'}
             label={'Simpsons'}
             checked={false}
@@ -29,17 +29,17 @@ export const FinalPage = (props) => {
       {count >= 30 &&
      <>
        <p>
-          Поздравляем Вы ответили верно на все вопросы,
-           ваш счёт - {count} из возможных 30!
+          Congratulations! You answered all the questions correctly,
+          your score is 30 out of a possible 30!
        </p>
        <img src={win} alt="You Win" className='win'/>
 
        <button className='button--start'>
          <NavLink
-           text={'На главную'}
+           text={'Home Page'}
            to={'/'}
            clear='true'
-         >На главную</NavLink>
+         >Home Page</NavLink>
        </button>
      </>
       }

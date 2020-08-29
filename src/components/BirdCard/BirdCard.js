@@ -17,8 +17,8 @@ export const BirdCard = (props) => {
     <div className="bird-card">
       {!checked &&
         <>
-          <p>Послушайте плеер.</p>
-          <p>Выберите птицу из списка</p>
+          <p>Listen to the player.</p>
+          <p>Select a character from the list</p>
         </>
       }
       {checked &&
