@@ -305,7 +305,7 @@ export const cartoonsData = [
       He is a genius scientist whose alcoholism and reckless,
       nihilistic behavior are a source of concern for his daughter's family, as well as the safety of their son, Morty.
       `,
-      image: 'https://vignette.wikia.nocookie.net/rickandmorty/images/a/a6/Rick_Sanchez.png',
+      image: 'https://upload.wikimedia.org/wikipedia/en/a/a6/Rick_Sanchez.png',
       audio: 'https://www.cartoonsoundboards.com/wp-content/audio/ram/rick/2/horse.mp3',
     },
     {
@@ -318,7 +318,7 @@ export const cartoonsData = [
       He is the grandson of Rick and is often forced to tag along on his various misadventures.
       Morty attends Harry Herpson High School along with his sister, Summer.
       `,
-      image: 'https://vignette.wikia.nocookie.net/rickandmorty/images/4/41/Morty_Smith.jpg',
+      image: 'https://upload.wikimedia.org/wikipedia/en/c/c3/Morty_Smith.png',
       audio: 'https://www.cartoonsoundboards.com/wp-content/audio/ram/morty/1/didntmean.mp3',
     },
     {
