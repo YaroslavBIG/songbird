@@ -21,14 +21,6 @@ clearCounter = () => {
   this.setState((prevState) => ({...prevState, count: 0}));
 };
 
-// componentDidMount() {
-//   this.clearCounter();
-// }
-
-// componentWillUnmount() {
-//   this.clearCounter();
-// }
-
 render() {
   return (
     <ScoreProvider
