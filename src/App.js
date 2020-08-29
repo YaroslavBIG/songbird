@@ -14,7 +14,7 @@ const App = () => (
         <QuizPage {...props} title={'South Park'} pageId={1} />} />
       <Route path='/futurama' render={(props) =>
         <QuizPage {...props} title={'Futurama'} pageId={2}/>} />
-      <Route path='/rikandmorty' render={(props) =>
+      <Route path='/rickandmorty' render={(props) =>
         <QuizPage {...props} title={'Rick and Morty'} pageId={3}/>} />
       <Route path='/americandad' render={(props) =>
         <QuizPage {...props} title={'American Dad'} pageId={4}/>} />

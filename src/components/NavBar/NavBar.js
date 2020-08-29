@@ -5,7 +5,7 @@ export const links = [
   {to: '/simpsons', label: 'Simpsons', exact: false, pageId: 0},
   {to: '/southpark', label: 'South Park', exact: false, pageId: 1},
   {to: '/futurama', label: 'Futurama', exact: false, pageId: 2},
-  {to: '/rikandmorty', label: 'Rick and Morty', exact: false, pageId: 3},
+  {to: '/rickandmorty', label: 'Rick and Morty', exact: false, pageId: 3},
   {to: '/americandad', label: 'American Dad', exact: false, pageId: 4},
   {to: '/familyguy', label: 'Family Guy', exact: false, pageId: 5},
 ];
