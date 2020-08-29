@@ -10,7 +10,7 @@
     overflow: hidden;
     width: 80px;
     -webkit-appearance: none;
-    background-color: #029973;
+    background-color: $palyer-range-inactive-color;
   }
   input[type='range']::-webkit-slider-runnable-track {
     height: 5px;

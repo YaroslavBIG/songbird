@@ -46,13 +46,8 @@ export class Player extends Component {
   }
 
   handleStop = () => {
-    console.log(this.prevUrl);
-    this.setState({
-      url: null,
-      playing: false,
-      played: 0,
-      loaded: 0,
-      duration: 0});
+    this.setState({playing: false});
+    this.props.setPlayNow(false);
   }
 
   handleToggleControls = () => {
