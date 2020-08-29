@@ -18,7 +18,6 @@ addCounter = (value) => (
 );
 
 clearCounter = () => {
-  console.log('ClearCounter');
   this.setState((prevState) => ({...prevState, count: 0}));
 };
 
