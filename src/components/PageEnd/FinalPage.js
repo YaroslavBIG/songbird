@@ -11,7 +11,7 @@ export const FinalPage = (props) => {
       {count < 30 &&
       <>
         <p>
-          Scored 30 points out of a possible 30
+          Scored {count} points out of a possible 30
         </p>
         <img src={lose} alt="Try Again" className='again'/>
         <p>You can do better - try again</p>
@@ -30,7 +30,7 @@ export const FinalPage = (props) => {
      <>
        <p>
           Congratulations! You answered all the questions correctly,
-          your score is 30 out of a possible 30!
+          your score is {count} out of a possible 30!
        </p>
        <img src={win} alt="You Win" className='win'/>
 

@@ -2,6 +2,12 @@
 import kennyVoice from 'sounds/cartoons/sp/Kenny.mp3';
 import kyleVoice from 'sounds/cartoons/sp/Kyle.mp3';
 import stanVoice from 'sounds/cartoons/sp/Stan.mp3';
+import fryVoice from 'sounds/cartoons/futurama/fry.mp3';
+import leelaVoice from 'sounds/cartoons/futurama/leela.mp3';
+import benderVoice from 'sounds/cartoons/futurama/bender.mp3';
+import profVoice from 'sounds/cartoons/futurama/prof.mp3';
+import amyVoice from 'sounds/cartoons/futurama/amy.mp3';
+import zoidbergVoice from 'sounds/cartoons/futurama/zoidberg.mp3';
 
 export const cartoonsData = [
   [
@@ -19,7 +25,7 @@ export const cartoonsData = [
         Enemies: Ned Flanders, the water department, God...
         Hero: Steve McQueen
         `,
-      image: 'http://www.simpsoncrazy.com/content/characters/homer2.gif',
+      image: 'https://vignette.wikia.nocookie.net/simpsons/images/b/bd/Homer_Simpson.png',
       audio: 'https://www.thesoundarchive.com/simpsons/homer/mchocola.mp3',
     },
     {
@@ -39,7 +45,7 @@ export const cartoonsData = [
         Hero: Ronny Beck
         Idol: Krusty the Klown
       `,
-      image: 'http://www.simpsoncrazy.com/content/characters/bart.gif',
+      image: 'https://vignette.wikia.nocookie.net/simpsons/images/6/65/Bart_Simpson.png',
       audio: 'https://www.thesoundarchive.com/simpsons/bart/damned.mp3',
     },
     {
@@ -55,7 +61,7 @@ export const cartoonsData = [
       Enemies: Allison Taylor, Ralph Wiggum
       Idol: The late Bleeding Gums Murphy
       `,
-      image: 'http://www.simpsoncrazy.com/content/characters/lisa.gif',
+      image: 'https://vignette.wikia.nocookie.net/simpsons/images/d/d5/Lisa_Simpson_official.png',
       audio: 'https://www.thesoundarchive.com/simpsons/misc/lisafox.mp3',
     },
     {
@@ -75,13 +81,13 @@ export const cartoonsData = [
       Enemies: None at present
       Hobbies: Knitting, loom
       `,
-      image: 'http://www.simpsoncrazy.com/content/characters/marge.gif',
+      image: 'https://vignette.wikia.nocookie.net/simpsons/images/4/4d/MargeSimpson.png',
       audio: 'https://www.thesoundarchive.com/simpsons/misc/margenedpipe.mp3',
     },
     {
       id: 5,
       name: 'Grampa',
-      species: 'Abraham "Grampa" Simpson',
+      species: 'Abraham Jebediah Simpson II',
       description: `
       Identity: Complaining old man, father of Homer.
       Age: Over 80.
@@ -92,13 +98,13 @@ export const cartoonsData = [
       Idol: TV star Matlock.
       Favorite Shop: Herman's Military Antiques.
       `,
-      image: 'http://www.simpsoncrazy.com/content/characters/abe.gif',
+      image: 'https://vignette.wikia.nocookie.net/simpsons/images/a/a9/Abraham_Simpson.png',
       audio: 'https://www.thesoundarchive.com/simpsons/misc/gramps.mp3',
     },
     {
       id: 6,
       name: 'Burns',
-      species: 'Charles Montgomery Burns',
+      species: 'Charles Montgomery Plantagenet Schicklgruber Burns',
       description: `
       Identity: Money-grabbing billionaire owner of the Springfield Nuclear Power Plant.
       Age: 81 or 104.
@@ -109,7 +115,7 @@ export const cartoonsData = [
       Admired by: Waylon Smithers
       Member of: The Stonecutters.
       `,
-      image: 'http://www.simpsoncrazy.com/content/characters/burns.gif',
+      image: 'https://vignette.wikia.nocookie.net/simpsons/images/a/a7/Montgomery_Burns.png',
       audio: 'https://www.thesoundarchive.com/simpsons/burns/Mr-Burns-punishment.mp3',
     },
   ],
@@ -207,7 +213,7 @@ export const cartoonsData = [
        He is the male protagonist of Futurama.
       `,
       image: 'https://vignette.wikia.nocookie.net/en.futurama/images/c/c0/Philip-J-Fry.png/',
-      audio: 'http://www.gotfuturama.com/Multimedia/EpisodeSounds/1ACV13/04.mp3',
+      audio: fryVoice,
     },
     {
       id: 2,
@@ -223,7 +229,7 @@ export const cartoonsData = [
       on the Planet Express delivery crew where she impressed Professor Farnsworth enough for him to make her captain.
       `,
       image: 'https://vignette.wikia.nocookie.net/enfuturama/images/a/ae/Turanga-Leela.png',
-      audio: 'http://www.gotfuturama.com/Multimedia/EpisodeSounds/1ACV13/07.mp3',
+      audio: leelaVoice,
     },
     {
       id: 3,
@@ -237,7 +243,7 @@ export const cartoonsData = [
         He was saved by Fry and later took up the job of ships cook at Planet Express.
       `,
       image: 'https://vignette.wikia.nocookie.net/enfuturama/images/a/a6/Bender_Rodriguez.png',
-      audio: 'http://www.gotfuturama.com/Multimedia/EpisodeSounds/1ACV03/15.mp3',
+      audio: benderVoice,
     },
     {
       id: 4,
@@ -252,7 +258,7 @@ export const cartoonsData = [
       the near death star he says he is 150.
       `,
       image: 'https://vignette.wikia.nocookie.net/enfuturama/images/4/4e/Professor-Farnsworth.png',
-      audio: 'http://www.gotfuturama.com/Multimedia/EpisodeSounds/3ACV19/20.mp3',
+      audio: profVoice,
     },
     {
       id: 5,
@@ -269,7 +275,7 @@ export const cartoonsData = [
       She is currently dating DOOP Lieutenant Kif Kroker
       `,
       image: 'https://vignette.wikia.nocookie.net/enfuturama/images/9/94/AmyWong.png',
-      audio: 'http://www.gotfuturama.com/Multimedia/EpisodeSounds/3ACV02/pukatronic.mp3',
+      audio: amyVoice,
     },
     {
       id: 6,
@@ -285,7 +291,7 @@ export const cartoonsData = [
       He has a desire to be famous wether it's in the movies or the stand up comedy circuit.
       `,
       image: 'https://vignette.wikia.nocookie.net/en.futurama/images/4/4a/Dr_John_Zoidberg.png',
-      audio: 'http://www.gotfuturama.com/Multimedia/EpisodeSounds/2ACV14/10.mp3',
+      audio: zoidbergVoice,
     },
   ],
   [
@@ -300,7 +306,7 @@ export const cartoonsData = [
       nihilistic behavior are a source of concern for his daughter's family, as well as the safety of their son, Morty.
       `,
       image: 'https://vignette.wikia.nocookie.net/rickandmorty/images/a/a6/Rick_Sanchez.png',
-      audio: 'http://www.cartoonsoundboards.com/wp-content/audio/ram/rick/2/horse.mp3',
+      audio: 'https://www.cartoonsoundboards.com/wp-content/audio/ram/rick/2/horse.mp3',
     },
     {
       id: 2,
@@ -313,7 +319,7 @@ export const cartoonsData = [
       Morty attends Harry Herpson High School along with his sister, Summer.
       `,
       image: 'https://vignette.wikia.nocookie.net/rickandmorty/images/4/41/Morty_Smith.jpg',
-      audio: 'http://www.cartoonsoundboards.com/wp-content/audio/ram/morty/1/didntmean.mp3',
+      audio: 'https://www.cartoonsoundboards.com/wp-content/audio/ram/morty/1/didntmean.mp3',
     },
     {
       id: 3,
@@ -328,7 +334,7 @@ export const cartoonsData = [
       She currently works as a veterinarian at the St. Equis Hospital.
       `,
       image: 'https://vignette.wikia.nocookie.net/rickandmorty/images/5/58/Beth_Smith.png',
-      audio: 'http://www.cartoonsoundboards.com/wp-content/audio/ram/beth/1/prison.mp3',
+      audio: 'https://www.cartoonsoundboards.com/wp-content/audio/ram/beth/1/prison.mp3',
     },
     {
       id: 4,
@@ -342,7 +348,7 @@ export const cartoonsData = [
         She is the only other member of the the Smith Family to be aware of that fact.
       `,
       image: 'https://vignette.wikia.nocookie.net/rickandmorty/images/a/ad/Summer_is_cool.jpeg',
-      audio: 'http://www.cartoonsoundboards.com/wp-content/audio/ram/summer/1/dropped.mp3',
+      audio: 'https://www.cartoonsoundboards.com/wp-content/audio/ram/summer/1/dropped.mp3',
     },
     {
       id: 5,
@@ -359,7 +365,7 @@ export const cartoonsData = [
        and he often competes with Rick for the admiration of his family.
       `,
       image: 'https://vignette.wikia.nocookie.net/rickandmorty/images/f/f1/Jerry_Smith.png',
-      audio: 'http://www.cartoonsoundboards.com/wp-content/audio/ram/jerry/1/canbe.mp3',
+      audio: 'https://www.cartoonsoundboards.com/wp-content/audio/ram/jerry/1/canbe.mp3',
     },
     {
       id: 6,
@@ -373,7 +379,7 @@ export const cartoonsData = [
       Physical violence or damage cannot eliminate them.
       `,
       image: 'https://vignette.wikia.nocookie.net/rickandmorty/images/6/6c/MeeseeksHQ.png',
-      audio: 'http://www.cartoonsoundboards.com/wp-content/audio/ram/meeseeks/1/task.mp3',
+      audio: 'https://www.cartoonsoundboards.com/wp-content/audio/ram/meeseeks/1/task.mp3',
     },
   ],
   [
@@ -388,7 +394,7 @@ export const cartoonsData = [
       Stan is always on alert for terrorist activity, at work, and in his home life.
       `,
       image: 'https://static.wikia.nocookie.net/americandad/images/0/0d/AmericanDad_09_Stan_v1F.jpg',
-      audio: 'http://www.cartoonsoundboards.com/wp-content/audio/ad/stan/1/gettingmarr.mp3',
+      audio: 'https://www.cartoonsoundboards.com/wp-content/audio/ad/stan/1/gettingmarr.mp3',
     },
     {
       id: 2,
@@ -403,7 +409,7 @@ export const cartoonsData = [
       At the age of 7, she was adopted and raised by a Chinese couple, Ma Ma and Bah Bah Ling.
       `,
       image: 'https://static.wikia.nocookie.net/americandad/images/1/16/AmericanDad_09_Francine_v1F.jpg',
-      audio: 'http://www.cartoonsoundboards.com/wp-content/audio/ad/francine/1/70-80chance.mp3',
+      audio: 'https://www.cartoonsoundboards.com/wp-content/audio/ad/francine/1/70-80chance.mp3',
     },
     {
       id: 3,
@@ -417,7 +423,7 @@ export const cartoonsData = [
         and is always trying to lose his virginity or have a girlfriend.
       `,
       image: 'https://static.wikia.nocookie.net/americandad/images/1/17/AmericanDad_09_Steve_v1F.jpg',
-      audio: 'http://www.cartoonsoundboards.com/wp-content/audio/ad/steve/1/quessex.mp3',
+      audio: 'https://www.cartoonsoundboards.com/wp-content/audio/ad/steve/1/quessex.mp3',
     },
     {
       id: 4,
@@ -430,7 +436,7 @@ export const cartoonsData = [
        Hayley is a talented guitarist and singer.
       `,
       image: 'https://static.wikia.nocookie.net/americandad/images/b/b6/Gal_hayley.jpg',
-      audio: 'http://www.cartoonsoundboards.com/wp-content/audio/ad/hayley/1/gonnadie.mp3',
+      audio: 'https://www.cartoonsoundboards.com/wp-content/audio/ad/hayley/1/gonnadie.mp3',
     },
     {
       id: 5,
@@ -444,7 +450,7 @@ export const cartoonsData = [
 
       `,
       image: 'https://static.wikia.nocookie.net/americandad/images/b/b9/AmericanDad_09_Roger_v1F.jpg',
-      audio: 'http://www.cartoonsoundboards.com/wp-content/audio/ad/roger/1/noofcour.mp3',
+      audio: 'https://www.cartoonsoundboards.com/wp-content/audio/ad/roger/1/noofcour.mp3',
     },
     {
       id: 6,
@@ -459,7 +465,7 @@ export const cartoonsData = [
       a fact Klaus has still apparently not come to terms with.
       `,
       image: 'https://static.wikia.nocookie.net/americandad/images/2/20/AmericanDad_09_Klaus_v1F.jpg',
-      audio: 'http://www.cartoonsoundboards.com/wp-content/audio/ad/klaus/1/pullself.mp3',
+      audio: 'https://www.cartoonsoundboards.com/wp-content/audio/ad/klaus/1/pullself.mp3',
     },
   ],
   [
@@ -476,7 +482,7 @@ export const cartoonsData = [
       Peter also has a habit of proving his masculinity, not wanting Lois to fall for another man.
       `,
       image: 'https://vignette.wikia.nocookie.net/familyguy/images/a/aa/FamilyGuy_Single_PeterDrink_R7.jpg',
-      audio: 'http://www.cartoonsoundboards.com/wp-content/audio/fg/peter/3/sayfat.mp3',
+      audio: 'https://www.cartoonsoundboards.com/wp-content/audio/fg/peter/3/sayfat.mp3',
     },
     {
       id: 2,
@@ -490,7 +496,7 @@ export const cartoonsData = [
         He still wants to kill Lois and take over the world but those goals have taken a back seat.
       `,
       image: 'https://vignette.wikia.nocookie.net/familyguy/images/9/90/FamilyGuy_Single_StewieBackpack_R7.jpg',
-      audio: 'http://www.cartoonsoundboards.com/wp-content/audio/fg/stewie/2/keepintouch.mp3',
+      audio: 'https://www.cartoonsoundboards.com/wp-content/audio/fg/stewie/2/keepintouch.mp3',
     },
     {
       id: 3,
@@ -506,7 +512,7 @@ export const cartoonsData = [
         the side.
       `,
       image: 'https://vignette.wikia.nocookie.net/familyguy/images/7/7c/FamilyGuy_Single_LoisPose_R7.jpg',
-      audio: 'http://www.cartoonsoundboards.com/wp-content/audio/fg/lois/2/normal.mp3',
+      audio: 'https://www.cartoonsoundboards.com/wp-content/audio/fg/lois/2/normal.mp3',
     },
     {
       id: 4,
@@ -520,7 +526,7 @@ export const cartoonsData = [
         Brian speaks fluent French and Tagalog, and is competent in Spanish. He is also a member of MENSA.
       `,
       image: 'https://vignette.wikia.nocookie.net/familyguy/images/c/c2/FamilyGuy_Single_BrianWriter_R7.jpg',
-      audio: 'http://www.cartoonsoundboards.com/wp-content/audio/fg/brian/2/notcomf.mp3',
+      audio: 'https://www.cartoonsoundboards.com/wp-content/audio/fg/brian/2/notcomf.mp3',
     },
     {
       id: 5,
@@ -535,7 +541,7 @@ export const cartoonsData = [
         Chris is also willing to do something as drastic as to convert to Judaism order to do better in school.
       `,
       image: 'https://vignette.wikia.nocookie.net/familyguy/images/e/ee/FamilyGuy_Single_ChrisText_R7.jpg',
-      audio: 'http://www.cartoonsoundboards.com/wp-content/audio/fg/chris/1/yourfunny.mp3',
+      audio: 'https://www.cartoonsoundboards.com/wp-content/audio/fg/chris/1/yourfunny.mp3',
     },
     {
       id: 6,
@@ -552,7 +558,7 @@ export const cartoonsData = [
         However, over the years, the writers stripped Meg down to a desperate teenager who is hardly noticed by her family.
       `,
       image: 'https://vignette.wikia.nocookie.net/familyguy/images/1/1b/FamilyGuy_Single_MegMakeup_R7.jpg ',
-      audio: 'http://www.cartoonsoundboards.com/wp-content/audio/fg/meg/1/begreat.mp3',
+      audio: 'https://www.cartoonsoundboards.com/wp-content/audio/fg/meg/1/begreat.mp3',
     },
   ],
   [
