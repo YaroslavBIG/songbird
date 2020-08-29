@@ -3,6 +3,7 @@ import {ScoreContext} from 'components/hoc/CounterState';
 import {NavLink} from 'react-router-dom';
 import win from 'img/congratulation.gif';
 import lose from 'img/again.gif';
+import cheat from 'img/cheater.jpg';
 
 export const FinalPage = (props) => {
   const {count} = useContext(ScoreContext);
@@ -22,26 +23,44 @@ export const FinalPage = (props) => {
             label={'Simpsons'}
             checked={false}
             clear='true'
-          >Снова</NavLink>
+          >Again</NavLink>
         </button>
       </>
       }
-      {count >= 30 &&
-     <>
-       <p>
-          Congratulations! You answered all the questions correctly,
-          your score is {count} out of a possible 30!
-       </p>
-       <img src={win} alt="You Win" className='win'/>
+      {count === 30 &&
+      <>
+        <p>Congratulations!</p>
+        <p>
+            You answered all the questions correctly,
+            your score is 30 out of a possible 30!
+        </p>
+        <img src={win} alt="You Win" className='win'/>
 
-       <button className='button--start'>
-         <NavLink
-           text={'Home Page'}
-           to={'/'}
-           clear='true'
-         >Home Page</NavLink>
-       </button>
-     </>
+        <button className='button--start'>
+          <NavLink
+            text={'Home Page'}
+            to={'/'}
+            clear='true'
+          >Home Page</NavLink>
+        </button>
+      </>
+      }
+      {count > 30 &&
+        <>
+          <p>Your score is {count} out of a possible 30!</p>
+          <p>You re not an honest man</p>
+          <p>Start over and play fair</p>
+          <img src={cheat} alt="Cheater" className='win'/>
+          <button className='button--start'>
+            <NavLink
+              text={'Again'}
+              to={'/simpsons'}
+              label={'Simpsons'}
+              checked={false}
+              clear='true'
+            >Again</NavLink>
+          </button>
+        </>
       }
     </div>
   );

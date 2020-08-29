@@ -1,9 +1,9 @@
 .nav-bar {
-  @extend%space-around;
   display: flex;
   flex-wrap: wrap;
   width: 90vw;
   margin-top: 0;
+  margin-bottom: 8px;
   background-color: $nav-bar-color;
   border-radius: 14px;
   -webkit-border-radius: 14px;

@@ -12,7 +12,7 @@ export const QuizPage = (props) => {
   const [checked, setChecked] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(1);
   const [playNow, setPlayNow] = useState(false);
-  console.log(cartoonsData[pageId][qustionNum].name);
+  console.log('Answer:', cartoonsData[pageId][qustionNum].name);
   useEffect(clearCounter, [clear]);
 
   const {
