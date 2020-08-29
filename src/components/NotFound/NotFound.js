@@ -4,7 +4,7 @@ import {ButtonNext} from 'components';
 export const NotFound = () => {
   return (
     <>
-      <p> Страница не найдена.</p>
+      <p>Что-то пошло не так. Страница не найдена.</p>
       <ButtonNext
         setChecked={false}
         success={true}

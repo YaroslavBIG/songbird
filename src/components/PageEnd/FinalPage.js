@@ -11,7 +11,7 @@ export const FinalPage = (props) => {
       {count < 25 &&
       <>
         <p>
-          Набрано {count} баллов
+          Набрано {count} баллов из 30
         </p>
         <img src={lose} alt="Try Again" className='again'/>
         <p>Вы можете лучше - попроуйте ещё раз</p>
